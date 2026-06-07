@@ -1,0 +1,630 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="description" content="DRD Gutters LLC - Professional gutter cleaning in Minnesota. Owner-operated, reliable, and fully insured. Free estimates. Call (612) 475-9200.">
+  <title>DRD Gutters LLC | Expert Gutter Cleaning in Minnesota</title>
+  <!-- Google Fonts + Font Awesome 6 -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #ffffff;
+      color: #1e2a3e;
+      scroll-behavior: smooth;
+      line-height: 1.5;
+    }
+
+    /* container utility */
+    .container {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    /* buttons */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 12px 28px;
+      border-radius: 40px;
+      font-weight: 600;
+      text-decoration: none;
+      transition: all 0.25s ease;
+      font-size: 1rem;
+      border: none;
+      cursor: pointer;
+    }
+
+    .btn-primary {
+      background-color: #f39c12;
+      color: #1e2a3e;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+    }
+
+    .btn-primary:hover {
+      background-color: #e67e22;
+      transform: translateY(-2px);
+      box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+      color: white;
+    }
+
+    .btn-outline {
+      background: transparent;
+      border: 2px solid #ffffff;
+      color: white;
+    }
+
+    .btn-outline:hover {
+      background: white;
+      color: #2c3e66;
+      border-color: white;
+    }
+
+    .btn-dark {
+      background-color: #1e4668;
+      color: white;
+    }
+
+    .btn-dark:hover {
+      background-color: #0f2e48;
+      transform: translateY(-2px);
+    }
+
+    /* header / navbar */
+    .navbar {
+      background-color: white;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.03);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      backdrop-filter: blur(0px);
+      border-bottom: 1px solid #eef2f6;
+    }
+
+    .nav-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      padding: 1rem 0;
+    }
+
+    .logo h1 {
+      font-size: 1.8rem;
+      font-weight: 800;
+      letter-spacing: -0.5px;
+      background: linear-gradient(135deg, #1e4668, #2c6e9e);
+      background-clip: text;
+      -webkit-background-clip: text;
+      color: transparent;
+    }
+
+    .logo span {
+      font-size: 0.9rem;
+      font-weight: 500;
+      color: #f39c12;
+      display: block;
+      letter-spacing: 0;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 32px;
+      flex-wrap: wrap;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      font-weight: 600;
+      color: #2c3e50;
+      transition: color 0.2s;
+    }
+
+    .nav-links a:hover {
+      color: #f39c12;
+    }
+
+    /* hero section */
+    .hero {
+      background: linear-gradient(135deg, rgba(20, 40, 60, 0.85), rgba(0, 0, 0, 0.65)), url('https://raw.githubusercontent.com/RMCCpromo/Temp_Images/refs/heads/main/Gutter.png');
+      background-size: cover;
+      background-position: center 35%;
+      color: white;
+      padding: 100px 0 110px;
+    }
+
+    .hero-content {
+      max-width: 700px;
+    }
+
+    .hero h1 {
+      font-size: 3.2rem;
+      font-weight: 800;
+      line-height: 1.2;
+      margin-bottom: 1.2rem;
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+      margin-bottom: 2rem;
+      opacity: 0.95;
+    }
+
+    .hero-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 18px;
+    }
+
+    /* sections */
+    section {
+      padding: 80px 0;
+    }
+
+    .section-title {
+      font-size: 2.2rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
+      text-align: center;
+      color: #1e2a3e;
+    }
+
+    .section-sub {
+      text-align: center;
+      color: #4a627a;
+      max-width: 700px;
+      margin: 0 auto 3rem;
+      font-size: 1.1rem;
+    }
+
+    /* services cards */
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2rem;
+    }
+
+    .service-card {
+      background: white;
+      border-radius: 28px;
+      overflow: hidden;
+      box-shadow: 0 15px 35px rgba(0,0,0,0.05);
+      transition: transform 0.25s ease, box-shadow 0.25s;
+      border: 1px solid #eff3f8;
+    }
+
+    .service-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 25px 40px rgba(0,0,0,0.1);
+    }
+
+    .service-img {
+      height: 200px;
+      overflow: hidden;
+    }
+
+    .service-img img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.4s;
+    }
+
+    .service-card:hover .service-img img {
+      transform: scale(1.04);
+    }
+
+    .service-card h3 {
+      font-size: 1.5rem;
+      margin: 1.2rem 1.2rem 0.5rem;
+      font-weight: 700;
+    }
+
+    .service-card p {
+      margin: 0 1.2rem 1.5rem;
+      color: #4b5e77;
+    }
+
+    /* about section */
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 3rem;
+      align-items: center;
+    }
+
+    .about-text h2 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+
+    .owner-badge {
+      display: inline-block;
+      background: #fef3e2;
+      color: #e67e22;
+      padding: 6px 16px;
+      border-radius: 40px;
+      font-weight: 600;
+      font-size: 0.85rem;
+      margin-bottom: 1rem;
+    }
+
+    .about-text p {
+      margin-bottom: 1rem;
+      color: #2c3e50;
+      line-height: 1.6;
+    }
+
+    .about-image img {
+      width: 100%;
+      border-radius: 32px;
+      box-shadow: 0 20px 30px -10px rgba(0,0,0,0.15);
+      object-fit: cover;
+      height: 100%;
+      max-height: 450px;
+    }
+
+    /* contact section */
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 3rem;
+      background: #f8fafc;
+      border-radius: 48px;
+      padding: 2rem 2rem 2rem 2rem;
+      box-shadow: 0 8px 30px rgba(0,0,0,0.02);
+    }
+
+    .contact-info {
+      background: white;
+      border-radius: 32px;
+      padding: 2rem;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.03);
+    }
+
+    .contact-info h3, .contact-form h3 {
+      font-size: 1.7rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .contact-detail {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      margin-bottom: 1.4rem;
+    }
+
+    .contact-detail i {
+      font-size: 1.5rem;
+      width: 40px;
+      color: #f39c12;
+    }
+
+    .contact-detail a, .contact-detail span {
+      color: #1e2a3e;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    .contact-detail a:hover {
+      color: #e67e22;
+    }
+
+    .form-group {
+      margin-bottom: 1.2rem;
+    }
+
+    input, textarea {
+      width: 100%;
+      padding: 14px 18px;
+      border-radius: 28px;
+      border: 1px solid #dce3ec;
+      font-family: inherit;
+      font-size: 1rem;
+      transition: 0.2s;
+      background: white;
+    }
+
+    input:focus, textarea:focus {
+      outline: none;
+      border-color: #f39c12;
+      box-shadow: 0 0 0 3px rgba(243,156,18,0.2);
+    }
+
+    button[type="submit"] {
+      background: #1e4668;
+      color: white;
+      border: none;
+      width: 100%;
+      padding: 14px;
+      font-weight: 700;
+      border-radius: 40px;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+
+    button[type="submit"]:hover {
+      background: #0f3552;
+      transform: translateY(-2px);
+    }
+
+    /* footer */
+    footer {
+      background-color: #0a1a2b;
+      color: #cbd5e1;
+      padding: 45px 0 25px;
+      text-align: center;
+    }
+
+    .footer-content {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 2rem;
+      margin-bottom: 2rem;
+      text-align: left;
+    }
+
+    .footer-logo p {
+      font-weight: 700;
+      font-size: 1.3rem;
+      color: white;
+    }
+
+    .footer-links a {
+      color: #cbd5e1;
+      text-decoration: none;
+      margin: 0 12px;
+      transition: color 0.2s;
+    }
+
+    .footer-links a:hover {
+      color: #f39c12;
+    }
+
+    .copyright {
+      border-top: 1px solid #1e374b;
+      padding-top: 1.8rem;
+      font-size: 0.85rem;
+    }
+
+    /* responsive */
+    @media (max-width: 880px) {
+      .nav-container {
+        flex-direction: column;
+        gap: 15px;
+      }
+      .hero h1 {
+        font-size: 2.2rem;
+      }
+      .about-grid, .contact-grid {
+        grid-template-columns: 1fr;
+      }
+      .contact-grid {
+        padding: 1.5rem;
+      }
+      .section-title {
+        font-size: 1.8rem;
+      }
+    }
+
+    @media (max-width: 580px) {
+      .hero-buttons {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      .btn {
+        text-align: center;
+        justify-content: center;
+      }
+      .services-grid {
+        gap: 1.5rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<!-- Navigation Bar -->
+<header class="navbar">
+  <div class="container nav-container">
+    <div class="logo">
+      <h1>DRD Gutters LLC</h1>
+      <span>Owner-operated · Minnesota proud</span>
+    </div>
+    <div class="nav-links">
+      <a href="#home">Home</a>
+      <a href="#services">Services</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </div>
+</header>
+
+<main>
+  <!-- Hero Section -->
+  <section id="home" class="hero">
+    <div class="container hero-content">
+      <h1>Professional Gutter Cleaning <br> Across Minnesota</h1>
+      <p>Protect your home from water damage, ice dams, and costly repairs. Licensed, insured, and fully dedicated — owned and operated by Delfino, your local gutter expert.</p>
+      <div class="hero-buttons">
+        <a href="tel:+16124759200" class="btn btn-primary"><i class="fas fa-phone-alt"></i> Call (612) 475-9200</a>
+        <a href="#contact" class="btn btn-outline"><i class="fas fa-file-signature"></i> Free Estimate</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services Section -->
+  <section id="services">
+    <div class="container">
+      <h2 class="section-title">Expert Gutter Services</h2>
+      <p class="section-sub">Comprehensive care for your gutters — from deep cleaning to minor repairs and protection systems.</p>
+      <div class="services-grid">
+        <div class="service-card">
+          <div class="service-img">
+            <img src="https://raw.githubusercontent.com/RMCCpromo/Temp_Images/refs/heads/main/Gutter.png" alt="Professional gutter cleaning on a ladder">
+          </div>
+          <h3>Gutter Cleaning</h3>
+          <p>Complete debris removal, flushing downspouts, and hand inspection. We leave your property spotless.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-img">
+            <img src="https://raw.githubusercontent.com/RMCCpromo/Temp_Images/refs/heads/main/Downspout.png" alt="Downspout clearing and maintenance">
+          </div>
+          <h3>Downspout Clearing</h3>
+          <p>Ensure proper water flow and prevent basement flooding. Fast & thorough unclogging.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-img">
+            <img src="https://raw.githubusercontent.com/RMCCpromo/Temp_Images/refs/heads/main/Guards.png" alt="Gutter guard installation">
+          </div>
+          <h3>Gutter Guard Installation</h3>
+          <p>Keep leaves and debris out permanently with premium gutter protection systems.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section: single owner, Minnesota focus -->
+  <section id="about" style="background: #f9fbfd;">
+    <div class="container about-grid">
+      <div class="about-text">
+        <div class="owner-badge"><i class="fas fa-user-check"></i> Owner-Operated · Minnesota Local</div>
+        <h2>Meet Delfino — Your Gutter Specialist</h2>
+        <p>DRD Gutters LLC is a <strong>single-owner, family-focused company</strong> based in Minnesota. Unlike big franchises, Delfino personally handles every estimate and job — ensuring top-tier quality, honest pricing, and real accountability.</p>
+        <p>With years of experience protecting homes across the Twin Cities and greater Minnesota from heavy rains and harsh winters, we understand the specific challenges of our local climate. From ice dam prevention to fall leaf buildup, we’ve got you covered.</p>
+        <p><i class="fas fa-check-circle" style="color:#f39c12;"></i> <strong>Fully licensed & insured</strong><br>
+        <i class="fas fa-check-circle" style="color:#f39c12;"></i> <strong>Free written estimates & gutter inspections</strong><br>
+        <i class="fas fa-check-circle" style="color:#f39c12;"></i> <strong>100% satisfaction guaranteed</strong></p>
+        <a href="#contact" class="btn btn-dark" style="margin-top: 15px;"><i class="fas fa-envelope"></i> Request a Callback</a>
+      </div>
+      <div class="about-image">
+        <img src="https://raw.githubusercontent.com/RMCCpromo/Temp_Images/refs/heads/main/Owner.png" alt="Experienced gutter technician cleaning gutters">
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact">
+    <div class="container">
+      <h2 class="section-title">Get In Touch</h2>
+      <p class="section-sub">Reach out today — we answer personally, no automated systems. Free estimates within 24 hours.</p>
+      <div class="contact-grid">
+        <div class="contact-info">
+          <h3><i class="fas fa-map-marker-alt" style="color:#f39c12;"></i> Contact Details</h3>
+          <div class="contact-detail">
+            <i class="fas fa-phone-alt"></i>
+            <a href="tel:+16124759200">(612) 475-9200</a>
+          </div>
+          <div class="contact-detail">
+            <i class="fas fa-envelope"></i>
+            <a href="mailto:delfino@drdgutters.com">delfino@drdgutters.com</a>
+          </div>
+          <div class="contact-detail">
+            <i class="fas fa-globe"></i>
+            <span>www.drdgutters.com</span>
+          </div>
+          <div class="contact-detail">
+            <i class="fas fa-location-dot"></i>
+            <span>Serving all of Minnesota — from Minneapolis to Duluth & Rochester</span>
+          </div>
+          <div class="contact-detail">
+            <i class="fas fa-clock"></i>
+            <span>Mon - Sat: 8:00 AM – 6:00 PM | Emergency calls welcome</span>
+          </div>
+          <hr style="margin: 1.5rem 0; background:#e2e8f0; height:1px; border:0;">
+          <p style="font-weight: 500; font-size: 1rem;"><i class="fas fa-hand-sparkles"></i> "When you call DRD Gutters, you talk directly to Delfino. No subcontractors, no middlemen — just honest, hard work."</p>
+        </div>
+        <div class="contact-form">
+          <h3>Send a Message</h3>
+          <form id="contactForm">
+            <div class="form-group">
+              <input type="text" id="name" placeholder="Full name" required>
+            </div>
+            <div class="form-group">
+              <input type="email" id="email" placeholder="Email address" required>
+            </div>
+            <div class="form-group">
+              <input type="tel" id="phone" placeholder="Phone number (optional)">
+            </div>
+            <div class="form-group">
+              <textarea rows="4" id="message" placeholder="Tell us about your gutter needs..." required></textarea>
+            </div>
+            <button type="submit"><i class="fas fa-paper-plane"></i> Request Free Estimate</button>
+            <p style="font-size: 0.75rem; margin-top: 12px; text-align: center;">We'll reply within 24h. Your info is safe with us.</p>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="container">
+    <div class="footer-content">
+      <div class="footer-logo">
+        <p>DRD Gutters LLC</p>
+        <small>Owner-operated · Minnesota's trusted gutter cleaner</small>
+      </div>
+      <div class="footer-links">
+        <a href="#home">Home</a>
+        <a href="#services">Services</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </div>
+    <div class="copyright">
+      <p>&copy; 2025 DRD Gutters LLC. All rights reserved. | <a href="mailto:delfino@drdgutters.com" style="color:#f39c12;">delfino@drdgutters.com</a> | <strong>Phone:</strong> (612) 475-9200 | <strong>MN License & insured</strong></p>
+      <p style="margin-top: 8px;"><i class="fas fa-snowplow"></i> Ready for Minnesota seasons — gutter cleaning, ice prevention, and spring maintenance.</p>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // Simple contact form simulation (demo - no backend, alerts user and shows success)
+  const contactForm = document.getElementById('contactForm');
+  if(contactForm) {
+    contactForm.addEventListener('submit', function(e) {
+      e.preventDefault();
+      const name = document.getElementById('name').value.trim();
+      const email = document.getElementById('email').value.trim();
+      const message = document.getElementById('message').value.trim();
+      if(!name || !email || !message) {
+        alert('Please fill in your name, email and message.');
+        return;
+      }
+      // Show success feedback (real-world would send to delfino@drdgutters.com)
+      alert(`Thanks ${name}! Delfino will reach out to you shortly at ${email}. We serve all Minnesota areas – expect a reply within 24h.`);
+      contactForm.reset();
+    });
+  }
+
+  // smooth scroll for all anchor links
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+      const href = this.getAttribute('href');
+      if (href === "#" || href === "") return;
+      const target = document.querySelector(href);
+      if (target) {
+        e.preventDefault();
+        target.scrollIntoView({
+          behavior: 'smooth',
+          block: 'start'
+        });
+      }
+    });
+  });
+</script>
+</body>
+</html>
