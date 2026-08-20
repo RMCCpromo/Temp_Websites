@@ -1,16 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-    <title>E&M Concrete Services LLC | Premium Concrete Contractors Minnesota</title>
-    <meta name="description" content="Top-rated concrete contractor serving the Minnesota metro area. Expert driveways, patios, stamped concrete, basement floors & sidewalks. Free estimates.">
-    <meta name="keywords" content="concrete contractor Minnesota, stamped concrete Minneapolis, driveway repair, patio installation, basement concrete, E&M Concrete Services">
-    <meta name="author" content="E&M Concrete Services LLC">
-    <!-- Google Fonts & Font Awesome -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Product Landing Page</title>
+
+    <!-- Tailwind CSS via CDN -->
+    <script src="https://cdn.tailwindcss.com">
+    </script>
+
+    <!-- Custom Styles -->
     <style>
+        /* ----------------------------------------------
+           1.  CUSTOM PROPERTIES (easy to edit later)
+           ---------------------------------------------- */
+        :root {
+            --color-navy: #1B2A4A;
+            --color-navy-light: #2C3E6B;
+            --color-red: #C0392B;
+            --color-red-hover: #A93226;
+            --color-white: #FFFFFF;
+            --color-gray-light: #F8F9FA;
+            --color-gray-border: #E2E8F0;
+            --shadow-sm: 0 4px 12px rgba(27, 42, 74, 0.08);
+            --shadow-md: 0 8px 30px rgba(27, 42, 74, 0.12);
+            --radius-lg: 24px;
+            --radius-md: 16px;
+            --radius-sm: 10px;
+            --font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+        }
+
+        /* ----------------------------------------------
+           2.  BASE RESET & TYPOGRAPHY
+           ---------------------------------------------- */
         * {
             margin: 0;
             padding: 0;
@@ -18,724 +40,573 @@
         }
 
         body {
-            font-family: 'Inter', sans-serif;
-            background-color: #fefefe;
-            color: #1e1e1e;
-            scroll-behavior: smooth;
-            line-height: 1.4;
-        }
-
-        /* Color variables strict */
-        :root {
-            --primary: #C01F47;
-            --primary-dark: #9a1739;
-            --silver: #C4C4C4;
-            --charcoal: #2C2C2C;
-            --charcoal-light: #3a3a3a;
-            --gray-bg: #f5f5f5;
-            --white: #ffffff;
-            --shadow-sm: 0 10px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.02);
-            --shadow-md: 0 20px 25px -12px rgba(0, 0, 0, 0.1);
-        }
-
-        /* Sticky nav */
-        .navbar {
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-            background: var(--charcoal);
-            backdrop-filter: blur(0px);
-            box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1);
-            padding: 1rem 2rem;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            flex-wrap: wrap;
-        }
-
-        .logo h1 {
-            font-size: 1.6rem;
-            font-weight: 800;
-            letter-spacing: -0.5px;
-            background: linear-gradient(135deg, var(--white) 30%, var(--silver) 90%);
-            -webkit-background-clip: text;
-            background-clip: text;
-            color: transparent;
-        }
-        .logo span {
-            color: var(--primary);
-            background: none;
-            -webkit-background-clip: unset;
-            background-clip: unset;
-        }
-
-        .nav-links {
-            display: flex;
-            gap: 2rem;
-            list-style: none;
-        }
-        .nav-links a {
-            text-decoration: none;
-            color: var(--white);
-            font-weight: 600;
-            font-size: 0.95rem;
-            transition: all 0.2s ease;
-            letter-spacing: 0.3px;
-        }
-        .nav-links a:hover {
-            color: var(--primary);
-        }
-        .phone-highlight {
-            background: var(--primary);
-            padding: 0.5rem 1rem;
-            border-radius: 40px;
-            font-weight: 700;
-            color: white !important;
-        }
-        .phone-highlight:hover {
-            background: var(--primary-dark);
-            color: white !important;
-        }
-
-        /* mobile */
-        .menu-toggle {
-            display: none;
-            font-size: 1.8rem;
-            color: white;
-            cursor: pointer;
-        }
-
-        /* sections */
-        section {
-            padding: 5rem 2rem;
-            scroll-margin-top: 80px;
-        }
-        .container {
-            max-width: 1300px;
-            margin: 0 auto;
-        }
-        h2 {
-            font-size: 2.4rem;
-            font-weight: 800;
-            color: var(--charcoal);
-            margin-bottom: 1rem;
-            letter-spacing: -0.02em;
-            border-left: 6px solid var(--primary);
-            padding-left: 1.2rem;
-        }
-        .section-subhead {
-            color: #5a5a5a;
-            margin-bottom: 3rem;
-            font-size: 1.1rem;
-        }
-
-        /* Hero */
-        .hero {
-            background: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.55)), url('https://raw.githubusercontent.com/RMCCpromo/E-M-Concrete-Services/refs/heads/main/banner.png');
-            background-size: cover;
-            background-position: center 35%;
-            min-height: 85vh;
+            font-family: var(--font-family);
+            background-color: var(--color-navy);
+            color: var(--color-navy);
+            min-height: 100vh;
             display: flex;
             align-items: center;
-            text-align: left;
-            color: white;
-        }
-        .hero-content {
-            max-width: 750px;
-        }
-        .hero h1 {
-            font-size: 3.8rem;
-            font-weight: 800;
-            line-height: 1.2;
-            margin-bottom: 1rem;
-        }
-        .hero p {
-            font-size: 1.2rem;
-            margin-bottom: 2rem;
-            opacity: 0.9;
-        }
-        .btn-group {
-            display: flex;
-            gap: 1.2rem;
-            flex-wrap: wrap;
-        }
-        .btn {
-            display: inline-flex;
-            align-items: center;
-            gap: 0.6rem;
-            padding: 0.9rem 2rem;
-            font-weight: 700;
-            border-radius: 40px;
-            text-decoration: none;
-            transition: all 0.25s ease;
-            font-size: 1rem;
-        }
-        .btn-primary {
-            background: var(--primary);
-            color: white;
-            border: none;
-        }
-        .btn-primary:hover {
-            background: var(--primary-dark);
-            transform: translateY(-3px);
-            box-shadow: 0 10px 20px rgba(192, 31, 71, 0.3);
-        }
-        .btn-outline {
-            background: transparent;
-            border: 2px solid white;
-            color: white;
-        }
-        .btn-outline:hover {
-            background: white;
-            color: var(--charcoal);
-            border-color: white;
-        }
-
-        /* Services grid */
-        .services-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
-            gap: 2rem;
-            margin-top: 1.5rem;
-        }
-        .service-card {
-            background: var(--white);
-            padding: 2rem 1rem;
-            border-radius: 24px;
-            text-align: center;
-            box-shadow: var(--shadow-sm);
-            transition: 0.2s ease;
-            border-bottom: 4px solid var(--silver);
-        }
-        .service-card i {
-            font-size: 2.6rem;
-            color: var(--primary);
-            margin-bottom: 1rem;
-        }
-        .service-card h3 {
-            font-size: 1.5rem;
-            margin-bottom: 0.5rem;
-            font-weight: 700;
-        }
-
-        /* Project gallery (image heavy) */
-        .gallery-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-            gap: 1.5rem;
-            margin-top: 2rem;
-        }
-        .gallery-item {
-            overflow: hidden;
-            border-radius: 20px;
-            box-shadow: var(--shadow-sm);
-            transition: 0.2s linear;
-            aspect-ratio: 1 / 0.9;
-        }
-        .gallery-item img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transition: transform 0.4s cubic-bezier(0.2, 0.9, 0.4, 1.1);
-        }
-        .gallery-item:hover img {
-            transform: scale(1.03);
-        }
-
-        /* Before After Slider Component */
-        .ba-grid {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 2rem;
             justify-content: center;
-            margin-top: 2rem;
+            padding: 2rem 1.5rem;
+            line-height: 1.6;
         }
-        .ba-card {
-            flex: 1;
-            min-width: 280px;
-            background: #fff;
-            border-radius: 28px;
-            overflow: hidden;
+
+        /* ----------------------------------------------
+           3.  MAIN CARD CONTAINER
+           ---------------------------------------------- */
+        .landing-card {
+            max-width: 640px;
+            width: 100%;
+            background: var(--color-white);
+            border-radius: var(--radius-lg);
             box-shadow: var(--shadow-md);
+            padding: 2.5rem 2rem 2.8rem;
+            transition: box-shadow 0.25s ease;
         }
-        .ba-title {
-            background: var(--charcoal);
-            color: white;
-            padding: 0.8rem;
-            text-align: center;
-            font-weight: 700;
-            font-size: 1.2rem;
+
+        @media (min-width: 768px) {
+            .landing-card {
+                padding: 3rem 3rem 3.2rem;
+            }
         }
-        .comparison-slider {
-            position: relative;
-            width: 100%;
-            aspect-ratio: 16 / 10;
-            overflow: hidden;
-            cursor: ew-resize;
-        }
-        .comparison-slider img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            display: block;
-            pointer-events: none;
-        }
-        .img-before {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            filter: none;
-        }
-        .img-after {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            clip-path: inset(0 50% 0 0);
-        }
-        .slider-handle {
-            position: absolute;
-            top: 0;
-            left: 50%;
-            width: 4px;
-            height: 100%;
-            background: white;
-            transform: translateX(-50%);
-            cursor: ew-resize;
-            z-index: 10;
-            box-shadow: 0 0 10px rgba(0,0,0,0.3);
-        }
-        .slider-handle::after {
-            content: '\f0ec';
-            font-family: 'Font Awesome 6 Free';
-            font-weight: 900;
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            background: var(--primary);
-            color: white;
-            border-radius: 50%;
-            padding: 8px;
-            font-size: 1rem;
-            width: 36px;
-            height: 36px;
+
+        /* ----------------------------------------------
+           4.  LOGO
+           ---------------------------------------------- */
+        .logo-wrapper {
             display: flex;
-            align-items: center;
             justify-content: center;
+            margin-bottom: 2rem;
         }
 
-        /* About */
-        .about-content {
-            display: flex;
-            gap: 3rem;
-            flex-wrap: wrap;
-            align-items: center;
-        }
-        .about-text {
-            flex: 2;
-        }
-        .about-stats {
-            flex: 1;
-            background: var(--charcoal);
-            padding: 2rem;
-            border-radius: 24px;
-            color: white;
+        .logo-img {
+            height: 56px;
+            width: auto;
+            display: block;
+            object-fit: contain;
+            transition: opacity 0.2s ease;
         }
 
-        /* Contact / estimate forms */
-        .forms-container {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 2rem;
+        .logo-img:hover {
+            opacity: 0.85;
         }
-        .form-card {
-            background: white;
-            border-radius: 28px;
-            padding: 2rem;
+
+        /* ----------------------------------------------
+           5.  PRODUCT IMAGE
+           ---------------------------------------------- */
+        .product-image-wrapper {
+            margin-bottom: 2.25rem;
+            border-radius: var(--radius-md);
+            overflow: hidden;
             box-shadow: var(--shadow-sm);
-            border: 1px solid var(--silver);
+            background: var(--color-gray-light);
+            line-height: 0;
         }
-        .form-card h3 {
-            font-size: 1.7rem;
-            margin-bottom: 1rem;
-            color: var(--primary);
-        }
-        input, select, textarea {
+
+        .product-img {
             width: 100%;
-            padding: 0.9rem 1rem;
-            margin: 0.6rem 0 1rem;
-            border: 1px solid #ddd;
-            border-radius: 20px;
-            font-family: inherit;
-            transition: 0.2s;
+            height: auto;
+            display: block;
+            aspect-ratio: 16 / 10;
+            object-fit: cover;
+            transition: transform 0.3s ease;
         }
-        input:focus, select:focus, textarea:focus {
-            outline: none;
-            border-color: var(--primary);
-            box-shadow: 0 0 0 3px rgba(192,31,71,0.2);
+
+        .product-img:hover {
+            transform: scale(1.01);
         }
-        button[type="submit"] {
-            background: var(--primary);
-            color: white;
-            border: none;
-            padding: 0.9rem;
+
+        /* ----------------------------------------------
+           6.  FORM
+           ---------------------------------------------- */
+        .form-group {
+            margin-bottom: 1.25rem;
+        }
+
+        .form-group label {
+            display: block;
+            font-size: 0.875rem;
+            font-weight: 600;
+            color: var(--color-navy);
+            margin-bottom: 0.35rem;
+            letter-spacing: 0.01em;
+        }
+
+        .form-group label .required-asterisk {
+            color: var(--color-red);
+            margin-left: 2px;
+        }
+
+        .form-control {
             width: 100%;
-            font-weight: 700;
-            border-radius: 40px;
+            padding: 0.7rem 1rem;
             font-size: 1rem;
+            font-family: var(--font-family);
+            border: 1.5px solid var(--color-gray-border);
+            border-radius: var(--radius-sm);
+            background: var(--color-white);
+            color: var(--color-navy);
+            transition: border-color 0.2s ease, box-shadow 0.2s ease;
+            outline: none;
+            -webkit-appearance: none;
+            appearance: none;
+        }
+
+        .form-control:focus {
+            border-color: var(--color-navy);
+            box-shadow: 0 0 0 3px rgba(27, 42, 74, 0.12);
+        }
+
+        .form-control::placeholder {
+            color: #A0AEC0;
+            font-size: 0.95rem;
+        }
+
+        /* ---- Select dropdown ---- */
+        select.form-control {
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%231B2A4A' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");
+            background-repeat: no-repeat;
+            background-position: right 1rem center;
+            padding-right: 2.5rem;
             cursor: pointer;
-            transition: 0.2s;
-        }
-        button[type="submit"]:hover {
-            background: var(--primary-dark);
         }
 
-        /* footer */
-        footer {
-            background: var(--charcoal);
-            color: var(--silver);
-            padding: 2.5rem 2rem;
+        select.form-control option {
+            padding: 0.4rem 0.8rem;
+        }
+
+        /* ---- Validation error states (custom) ---- */
+        .form-control.is-invalid {
+            border-color: var(--color-red);
+        }
+
+        .form-control.is-invalid:focus {
+            box-shadow: 0 0 0 3px rgba(192, 57, 43, 0.15);
+        }
+
+        /* ----------------------------------------------
+           7.  SUBMIT BUTTON
+           ---------------------------------------------- */
+        .submit-btn {
+            display: block;
+            width: 100%;
+            padding: 0.9rem 1.5rem;
+            margin-top: 0.5rem;
+            font-size: 1.125rem;
+            font-weight: 700;
+            font-family: var(--font-family);
+            color: var(--color-white);
+            background-color: var(--color-navy);
+            border: none;
+            border-radius: var(--radius-sm);
+            cursor: pointer;
+            transition: background-color 0.25s ease, transform 0.15s ease, box-shadow 0.25s ease;
+            letter-spacing: 0.02em;
+            box-shadow: 0 4px 14px rgba(27, 42, 74, 0.20);
+        }
+
+        .submit-btn:hover {
+            background-color: var(--color-red-hover);
+            box-shadow: 0 6px 20px rgba(192, 57, 43, 0.30);
+            transform: translateY(-1px);
+        }
+
+        .submit-btn:active {
+            transform: translateY(0px);
+            box-shadow: 0 2px 8px rgba(192, 57, 43, 0.25);
+        }
+
+        .submit-btn:focus-visible {
+            outline: 3px solid var(--color-red);
+            outline-offset: 3px;
+        }
+
+        /* ---- Disabled state (while submitting) ---- */
+        .submit-btn:disabled {
+            opacity: 0.7;
+            cursor: not-allowed;
+            transform: none !important;
+            background-color: var(--color-navy-light);
+            box-shadow: 0 2px 10px rgba(27, 42, 74, 0.15);
+        }
+
+        /* ----------------------------------------------
+           8.  FORM STATUS MESSAGE
+           ---------------------------------------------- */
+        .form-status {
+            margin-top: 1.25rem;
+            padding: 0.75rem 1rem;
+            border-radius: var(--radius-sm);
+            font-size: 0.95rem;
+            font-weight: 500;
             text-align: center;
+            display: none;
         }
 
-        /* animations */
-        .fade-up {
-            opacity: 0;
-            transform: translateY(35px);
-            transition: opacity 0.7s ease, transform 0.7s ease;
-        }
-        .fade-up.visible {
-            opacity: 1;
-            transform: translateY(0);
+        .form-status.success {
+            display: block;
+            background: #E8F5E9;
+            color: #2E7D32;
+            border: 1px solid #A5D6A7;
         }
 
-        @media (max-width: 900px) {
-            .navbar {
-                flex-direction: row;
-                padding: 1rem;
+        .form-status.error {
+            display: block;
+            background: #FFEBEE;
+            color: #C62828;
+            border: 1px solid #EF9A9A;
+        }
+
+        /* ----------------------------------------------
+           9.  RESPONSIVE TWEAKS
+           ---------------------------------------------- */
+        @media (max-width: 480px) {
+            .landing-card {
+                padding: 1.75rem 1.25rem 2rem;
             }
-            .nav-links {
-                display: none;
-                width: 100%;
-                flex-direction: column;
-                gap: 1rem;
-                background: var(--charcoal);
-                padding: 1.5rem 0;
-                margin-top: 1rem;
-                text-align: center;
+
+            .logo-img {
+                height: 44px;
             }
-            .nav-links.active {
-                display: flex;
+
+            .form-control {
+                padding: 0.6rem 0.85rem;
+                font-size: 0.95rem;
             }
-            .menu-toggle {
-                display: block;
+
+            .submit-btn {
+                padding: 0.75rem 1.25rem;
+                font-size: 1rem;
             }
-            .hero h1 {
-                font-size: 2.5rem;
-            }
-            .forms-container {
-                grid-template-columns: 1fr;
-            }
-            h2 {
-                font-size: 2rem;
+
+            .form-group label {
+                font-size: 0.8rem;
             }
         }
-        @media (max-width: 650px) {
-            section {
-                padding: 3rem 1.2rem;
+
+        @media (min-width: 481px) and (max-width: 767px) {
+            .landing-card {
+                padding: 2rem 1.75rem 2.4rem;
             }
         }
-        .phone-number-big {
-            font-size: 1.6rem;
-            font-weight: 800;
-            color: var(--primary);
-        }
-        .cta-phone {
-            background: var(--primary);
-            color: white;
-            border-radius: 60px;
-            display: inline-flex;
-            align-items: center;
-            padding: 0.5rem 1.3rem;
-            gap: 0.5rem;
+
+        /* ----------------------------------------------
+           10. UTILITY – visually hidden (for screen readers)
+           ---------------------------------------------- */
+        .sr-only {
+            position: absolute !important;
+            width: 1px !important;
+            height: 1px !important;
+            padding: 0 !important;
+            margin: -1px !important;
+            overflow: hidden !important;
+            clip: rect(0, 0, 0, 0) !important;
+            border: 0 !important;
         }
     </style>
 </head>
+
 <body>
 
-<nav class="navbar">
-    <div class="logo">
-        <h1>E&M <span>Concrete</span> Services</h1>
+    <!-- ==============================================
+    MAIN CARD
+    ============================================== -->
+    <main class="landing-card" role="main">
+
+        <!-- ===== 1. LOGO ===== -->
+        <div class="logo-wrapper">
+            <img
+            class="logo-img"
+            src="https://raw.githubusercontent.com/RMCCpromo/RMCC-Images/refs/heads/main/Impact_Logo.png"
+            alt="Company logo placeholder"
+            width="200"
+            height="80"
+            />
+        </div>
+
+        <!-- ===== 2. PRODUCT IMAGE ===== -->
+        <div class="product-image-wrapper">
+            <img
+            class="product-img"
+            src="https://raw.githubusercontent.com/RMCCpromo/RMCC-Images/refs/heads/main/ESOP_mockup.png"
+            alt="Product image placeholder"
+            width="800"
+            height="500"
+            loading="lazy"
+            />
+        </div>
+
+        <!-- ===== 3. FORM ===== -->
+        <!--
+        IMPORTANT: Replace the `action` URL below with your own Formspree endpoint.
+        Keep `method="POST"` and all `name` attributes unchanged.
+        -->
+        <form
+        id="productForm"
+        method="POST"
+        action="https://formspree.io/f/YOUR_FORM_ID"
+        novalidate
+        >
+
+        <!-- 3.1 Full Name -->
+        <div class="form-group">
+            <label for="fullName">
+                Full Name
+                <span class="required-asterisk" aria-hidden="true">*</span>
+            </label>
+            <input
+            type="text"
+            id="fullName"
+            name="fullName"
+            class="form-control"
+            placeholder="e.g. Jane Smith"
+            required
+            autocomplete="name"
+            />
+        </div>
+
+        <!-- 3.2 Email Address -->
+        <div class="form-group">
+            <label for="email">
+                Email Address
+                <span class="required-asterisk" aria-hidden="true">*</span>
+            </label>
+            <input
+            type="email"
+            id="email"
+            name="email"
+            class="form-control"
+            placeholder="e.g. jane@example.com"
+            required
+            autocomplete="email"
+            inputmode="email"
+            />
+        </div>
+
+        <!-- 3.3 Phone Number -->
+        <div class="form-group">
+            <label for="phone">
+                Phone Number
+                <span class="required-asterisk" aria-hidden="true">*</span>
+            </label>
+            <input
+            type="tel"
+            id="phone"
+            name="phone"
+            class="form-control"
+            placeholder="e.g. (555) 123-4567"
+            required
+            autocomplete="tel"
+            inputmode="tel"
+            />
+        </div>
+
+        <!-- 3.4 Promo Code (now required) -->
+        <div class="form-group">
+            <label for="promoCode">
+                Promo Code
+                <span class="required-asterisk" aria-hidden="true">*</span>
+            </label>
+            <input
+            type="text"
+            id="promoCode"
+            name="promoCode"
+            class="form-control"
+            placeholder="Enter promo code"
+            required
+            autocomplete="off"
+            />
+        </div>
+
+        <!-- 3.5 T Shirt Size (dropdown) -->
+        <div class="form-group">
+            <label for="shirtSize">
+                T Shirt Size
+                <span class="required-asterisk" aria-hidden="true">*</span>
+            </label>
+            <select
+            id="shirtSize"
+            name="shirtSize"
+            class="form-control"
+            required
+            >
+            <option value="" disabled selected>— Select a size —</option>
+            <option value="Small">Small</option>
+            <option value="Medium">Medium</option>
+            <option value="Large">Large</option>
+            <option value="XL">XL</option>
+            <option value="2XL">2XL</option>
+            <option value="3XL">3XL</option>
+        </select>
     </div>
-    <div class="menu-toggle" id="mobile-menu">
-        <i class="fas fa-bars"></i>
-    </div>
-    <ul class="nav-links" id="nav-links">
-        <li><a href="#home">Home</a></li>
-        <li><a href="#services">Services</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#beforeafter">Before/After</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#contact">Contact</a></li>
-        <li><a href="tel:+17633189637" class="phone-highlight"><i class="fas fa-phone-alt"></i> (763) 318-9637</a></li>
-    </ul>
-</nav>
 
-<main>
-    <!-- Hero -->
-    <section id="home" class="hero">
-        <div class="container hero-content fade-up">
-            <h1>Strong Foundations. <br>Flawless Finishes.</h1>
-            <p>Minnesota’s trusted concrete experts — driveways, patios, stamped concrete & more. Precision craftsmanship for your residential and commercial projects.</p>
-            <div class="btn-group">
-                <a href="tel:+17633189637" class="btn btn-primary"><i class="fas fa-phone-alt"></i> Call Now: (763) 318-9637</a>
-                <a href="#contact" class="btn btn-outline"><i class="fas fa-calculator"></i> Request Free Estimate</a>
-            </div>
-        </div>
-    </section>
+    <!-- ===== 4. SUBMIT BUTTON ===== -->
+    <button
+    type="submit"
+    class="submit-btn"
+    id="submitBtn"
+    >
+    Submit
+</button>
 
-    <!-- Services Section -->
-    <section id="services" class="container fade-up">
-        <h2>Premium Concrete Services</h2>
-        <div class="section-subhead">Serving Minneapolis, St. Paul, and entire Minnesota metro area</div>
-        <div class="services-grid">
-            <div class="service-card"><i class="fas fa-road"></i><h3>Driveways</h3><p>Durable, decorative & weather-resistant driveways.</p></div>
-            <div class="service-card"><i class="fas fa-umbrella"></i><h3>Patios</h3><p>Custom stamped & smooth patios for outdoor living.</p></div>
-            <div class="service-card"><i class="fas fa-home"></i><h3>Basements</h3><p>Epoxy & polished concrete floors, foundation repair.</p></div>
-            <div class="service-card"><i class="fas fa-palette"></i><h3>Stamped Concrete</h3><p>Elegant patterns, stone textures & custom colors.</p></div>
-            <div class="service-card"><i class="fas fa-walking"></i><h3>Sidewalks</h3><p>Safe, code-compliant walkways & curbing.</p></div>
-        </div>
-    </section>
+<!-- ===== 5. FORM STATUS MESSAGE ===== -->
+<div id="formStatus" class="form-status" role="alert" aria-live="polite"></div>
 
-    <!-- Project Gallery (image heavy) -->
-    <section id="projects" class="container fade-up">
-        <h2>Our Concrete Portfolio</h2>
-        <div class="section-subhead">High-quality craftsmanship across Minnesota — modern stamped, exposed aggregate, and more</div>
-        <div class="gallery-grid">
-            <div class="gallery-item"><img loading="lazy" src="https://raw.githubusercontent.com/RMCCpromo/E-M-Concrete-Services/refs/heads/main/show1.png" alt="Modern concrete driveway"></div>
-            <div class="gallery-item"><img loading="lazy" src="https://raw.githubusercontent.com/RMCCpromo/E-M-Concrete-Services/refs/heads/main/show2.png" alt="Stamped concrete patio"></div>
-            <div class="gallery-item"><img loading="lazy" src="https://raw.githubusercontent.com/RMCCpromo/E-M-Concrete-Services/refs/heads/main/show3.png" alt="Basement concrete floor"></div>
-            <div class="gallery-item"><img loading="lazy" src="https://raw.githubusercontent.com/RMCCpromo/E-M-Concrete-Services/refs/heads/main/show4.png" alt="Stamped concrete walkway"></div>
-            <div class="gallery-item"><img loading="lazy" src="https://raw.githubusercontent.com/RMCCpromo/E-M-Concrete-Services/refs/heads/main/show5.jpg" alt="Resurfaced driveway"></div>
-            <div class="gallery-item"><img loading="lazy" src="https://raw.githubusercontent.com/RMCCpromo/E-M-Concrete-Services/refs/heads/main/show6.png" alt="Exposed aggregate finish"></div>
-            <div class="gallery-item"><img loading="lazy" src="https://raw.githubusercontent.com/RMCCpromo/E-M-Concrete-Services/refs/heads/main/show7.png" alt="Concrete sidewalk renovation"></div>
-            <div class="gallery-item"><img loading="lazy" src="https://raw.githubusercontent.com/RMCCpromo/E-M-Concrete-Services/refs/heads/main/show8.png" alt="Large patio with border"></div>
-        </div>
-    </section>
+</form>
 
-    <!-- Before & After Section with 3 sliders -->
-    <section id="beforeafter" class="container fade-up">
-        <h2>Before & After Transformations</h2>
-        <div class="section-subhead">See the E&M difference — slide to compare our work on real Minnesota projects</div>
-        <div class="ba-grid" id="baGrid">
-            <!-- each ba-card will be injected? Better hardcode three components but ensure sliders work -->
-        </div>
-    </section>
-
-    <!-- About Section -->
-    <section id="about" class="container fade-up">
-        <h2>About E&M Concrete Services LLC</h2>
-        <div class="about-content">
-            <div class="about-text">
-                <p style="font-size:1.1rem; margin-bottom:1rem">Based in the heart of the Minnesota metro, E&M Concrete Services delivers unwavering quality and integrity. With over 15 years of experience, our team specializes in decorative stamped concrete, high-strength driveways, and basement finishing — built to endure harsh midwest winters.</p>
-                <p>We combine modern equipment with old-school craftsmanship, ensuring every pour is flawless. Fully licensed & insured, we’re proud to serve homeowners and businesses across Minneapolis, St. Paul, Bloomington, and surrounding suburbs. Your satisfaction, our foundation.</p>
-                <div style="margin-top:1.5rem"><i class="fas fa-check-circle" style="color:var(--primary)"></i> Lifetime workmanship warranty &nbsp;&nbsp; <i class="fas fa-truck" style="color:var(--primary)"></i> Free on‑site estimates</div>
-            </div>
-            <div class="about-stats">
-                <i class="fas fa-trophy" style="font-size:2rem; color: var(--primary);"></i>
-                <h3 style="font-size:2rem; margin:0.5rem 0">300+</h3>
-                <p>Completed Projects in MN</p>
-                <hr style="margin:1rem 0; background: #444">
-                <i class="fas fa-star-of-life"></i>
-                <p>5-Star Google Rating | Best of HomeAdvisor 2024</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact & Estimate Section -->
-    <section id="contact" class="container fade-up">
-        <h2>Get Your Free Estimate</h2>
-        <div class="section-subhead">Reach out today — we’ll bring your concrete vision to life</div>
-        <div class="forms-container">
-            <!-- Contact Form -->
-            <div class="form-card">
-                <h3><i class="fas fa-envelope"></i> Contact Us</h3>
-                <form action="https://formspree.io/f/xxxxxxxx" method="POST" id="contactForm">
-                    <input type="text" name="name" placeholder="Full Name" required>
-                    <input type="email" name="email" placeholder="Email Address" required>
-                    <textarea name="message" rows="3" placeholder="Tell us about your project..."></textarea>
-                    <button type="submit">Send Message <i class="fas fa-arrow-right"></i></button>
-                    <input type="text" name="_gotcha" style="display:none">
-                    <!-- Placeholder: Replace 'xxxxxxxx' with actual Formspree ID -->
-                    <small style="display:block; margin-top:0.5rem; color:#888">*We’ll respond within 24hrs</small>
-                </form>
-            </div>
-            <!-- Estimate Request Form -->
-            <div class="form-card">
-                <h3><i class="fas fa-calculator"></i> Request Estimate</h3>
-                <form action="https://formspree.io/f/xxxxxxxx" method="POST" id="estimateForm">
-                    <input type="text" name="name" placeholder="Full Name" required>
-                    <input type="email" name="email" placeholder="Email" required>
-                    <input type="tel" name="phone" placeholder="Phone Number" required>
-                    <select name="service">
-                        <option value="Driveway">Driveway</option><option value="Patio">Patio</option>
-                        <option value="Basement">Basement</option><option value="Stamped Concrete">Stamped Concrete</option>
-                        <option value="Sidewalk">Sidewalk</option>
-                    </select>
-                    <textarea name="details" rows="2" placeholder="Project details, size, timeline"></textarea>
-                    <button type="submit">Get Free Estimate →</button>
-                    <input type="text" name="_gotcha" style="display:none">
-                </form>
-                <div style="margin-top:1rem; text-align:center; font-size:0.9rem">Or call directly: <strong class="phone-number-big">(763) 318-9637</strong></div>
-            </div>
-        </div>
-        <div style="margin-top:2rem; text-align:center; background:var(--charcoal); padding:1rem; border-radius:50px; color:white">
-            <i class="fas fa-map-marker-alt"></i> Serving the entire Twin Cities metro & surrounding Minnesota areas
-        </div>
-    </section>
 </main>
 
-<footer>
-    <div>
-        <p><strong>E&M Concrete Services LLC</strong> | Minnesota Licensed & Insured</p>
-        <p><i class="fas fa-phone-alt"></i> <a href="tel:+17633189637" style="color:var(--silver); text-decoration:none">(763) 318-9637</a> | <i class="fas fa-envelope"></i> estimate@emconcretemn.com</p>
-        <p style="margin-top:1rem; font-size:0.85rem">© 2025 E&M Concrete Services — Built to Last in Minnesota</p>
-    </div>
-</footer>
-
+<!-- ==============================================
+JAVASCRIPT
+============================================== -->
 <script>
-    // Mobile menu toggle
-    const mobileBtn = document.getElementById('mobile-menu');
-    const navLinks = document.getElementById('nav-links');
-    mobileBtn.addEventListener('click', () => {
-        navLinks.classList.toggle('active');
-    });
+    (function() {
+        'use strict';
 
-    // Smooth scroll offset for sticky header (manual links already smooth via css)
-    document.querySelectorAll('.nav-links a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function(e) {
-            const targetId = this.getAttribute('href');
-            if(targetId === "#" || targetId === "") return;
-            const targetElem = document.querySelector(targetId);
-            if(targetElem) {
-                e.preventDefault();
-                const offset = 70;
-                const elementPos = targetElem.getBoundingClientRect().top + window.pageYOffset;
-                window.scrollTo({ top: elementPos - offset, behavior: 'smooth' });
-                navLinks.classList.remove('active');
+        // ---- DOM refs ----
+        const form = document.getElementById('productForm');
+        const submitBtn = document.getElementById('submitBtn');
+        const statusEl = document.getElementById('formStatus');
+        const allInputs = form.querySelectorAll('.form-control');
+
+        // ---- Helper: show status message ----
+        function setStatus(message, type) {
+            statusEl.textContent = message;
+            statusEl.className = 'form-status ' + type;
+            statusEl.style.display = 'block';
+        }
+
+        // ---- Helper: clear status ----
+        function clearStatus() {
+            statusEl.textContent = '';
+            statusEl.className = 'form-status';
+            statusEl.style.display = 'none';
+        }
+
+        // ---- Helper: remove invalid styling from all fields ----
+        function clearInvalidStyles() {
+            allInputs.forEach(function(input) {
+                input.classList.remove('is-invalid');
+            });
+        }
+
+        // ---- Helper: mark invalid fields ----
+        function markInvalidFields() {
+            clearInvalidStyles();
+            let firstInvalid = null;
+            allInputs.forEach(function(input) {
+                if (!input.validity.valid) {
+                    input.classList.add('is-invalid');
+                    if (!firstInvalid) {
+                        firstInvalid = input;
+                    }
+                }
+            });
+            return firstInvalid;
+        }
+
+        // ---- Custom validation: show message if fields are missing ----
+        function validateForm() {
+            clearStatus();
+            clearInvalidStyles();
+
+            // Check validity
+            if (form.checkValidity()) {
+                return true;
             }
-        });
-    });
-    // Hero button & estimate buttons smooth scroll
-    const estimateBtns = document.querySelectorAll('.btn-outline[href="#contact"]');
-    estimateBtns.forEach(btn => {
-        btn.addEventListener('click', function(e) {
+
+            // Find the first invalid field and focus it
+            const firstInvalid = markInvalidFields();
+            if (firstInvalid) {
+                firstInvalid.focus({ preventScroll: true });
+                // Scroll smoothly to the field
+                firstInvalid.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            }
+
+            // Show a custom error message
+            setStatus('All fields are required. Please complete the form.', 'error');
+            return false;
+        }
+
+        // ---- Reset form (clear values & status) ----
+        function resetForm() {
+            form.reset();
+            clearInvalidStyles();
+            clearStatus();
+            // Remove any residual validation styling
+            allInputs.forEach(function(input) {
+                input.blur();
+            });
+        }
+
+        // ---- Handle form submission ----
+        form.addEventListener('submit', function(e) {
             e.preventDefault();
-            const contactSec = document.querySelector('#contact');
-            if(contactSec) {
-                window.scrollTo({ top: contactSec.offsetTop - 70, behavior: 'smooth' });
-            }
-        });
-    });
 
-    // Before After Slider Generator for 3 projects
-    const baData = [
-        { title: "Driveway Makeover", before: "https://raw.githubusercontent.com/RMCCpromo/E-M-Concrete-Services/refs/heads/main/before1.png", after: "https://raw.githubusercontent.com/RMCCpromo/E-M-Concrete-Services/refs/heads/main/after1.png" },
-        { title: "Patio Transformation", before: "https://raw.githubusercontent.com/RMCCpromo/E-M-Concrete-Services/refs/heads/main/before2.png", after: "https://raw.githubusercontent.com/RMCCpromo/E-M-Concrete-Services/refs/heads/main/after2.png" },
-        { title: "Stamped Concrete Revival", before: "https://raw.githubusercontent.com/RMCCpromo/E-M-Concrete-Services/refs/heads/main/before3.png", after: "https://raw.githubusercontent.com/RMCCpromo/E-M-Concrete-Services/refs/heads/main/after3.png" }
-    ];
-    const baGrid = document.getElementById('baGrid');
-    function initSlider(sliderElement, beforeSrc, afterSrc) {
-        const imgBefore = document.createElement('img');
-        imgBefore.src = beforeSrc;
-        imgBefore.classList.add('img-before');
-        const imgAfter = document.createElement('img');
-        imgAfter.src = afterSrc;
-        imgAfter.classList.add('img-after');
-        sliderElement.appendChild(imgBefore);
-        sliderElement.appendChild(imgAfter);
-        const handle = document.createElement('div');
-        handle.classList.add('slider-handle');
-        sliderElement.appendChild(handle);
-        let isDragging = false;
-        function updateClip(posX) {
-            let rect = sliderElement.getBoundingClientRect();
-            let x = Math.min(Math.max(posX - rect.left, 0), rect.width);
-            let percent = (x / rect.width) * 100;
-            imgAfter.style.clipPath = `inset(0 ${100 - percent}% 0 0)`;
-            handle.style.left = `${percent}%`;
-        }
-        function onMove(e) {
-            if (!isDragging) return;
-            let clientX = e.type.startsWith('touch') ? e.touches[0].clientX : e.clientX;
-            updateClip(clientX);
-        }
-        function startDrag(e) {
-            isDragging = true;
-            e.preventDefault();
-        }
-        function endDrag() {
-            isDragging = false;
-        }
-        sliderElement.addEventListener('mousedown', startDrag);
-        window.addEventListener('mousemove', onMove);
-        window.addEventListener('mouseup', endDrag);
-        sliderElement.addEventListener('touchstart', startDrag);
-        window.addEventListener('touchmove', onMove);
-        window.addEventListener('touchend', endDrag);
-        // set initial 50%
-        const rect = sliderElement.getBoundingClientRect();
-        updateClip(rect.left + rect.width * 0.5);
-    }
-    baData.forEach(project => {
-        const card = document.createElement('div');
-        card.className = 'ba-card';
-        card.innerHTML = `<div class="ba-title">${project.title}</div>`;
-        const sliderDiv = document.createElement('div');
-        sliderDiv.className = 'comparison-slider';
-        card.appendChild(sliderDiv);
-        baGrid.appendChild(card);
-        initSlider(sliderDiv, project.before, project.after);
-    });
-
-    // Intersection Observer for fade-up animations
-    const faders = document.querySelectorAll('.fade-up');
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if(entry.isIntersecting) {
-                entry.target.classList.add('visible');
-                observer.unobserve(entry.target);
+            // Run custom validation
+            if (!validateForm()) {
+                return; // stop submission
             }
-        });
-    }, { threshold: 0.1, rootMargin: "0px 0px -40px 0px" });
-    faders.forEach(el => observer.observe(el));
-    // Also observe new elements that might appear dynamically (non)
-    document.querySelectorAll('.container > h2, .services-grid, .gallery-grid, .ba-grid, .about-content, .forms-container').forEach(el => {
-        if(!el.classList.contains('fade-up')) el.classList.add('fade-up');
-        observer.observe(el);
-    });
-    // manual pre-run for visible check
-    window.dispatchEvent(new Event('scroll'));
 
-    // Formspree placeholders note:
-    const forms = document.querySelectorAll('#contactForm, #estimateForm');
-    forms.forEach(form => {
-        form.addEventListener('submit', (e) => {
-            let actionUrl = form.getAttribute('action');
-            if(actionUrl.includes('xxxxxxxx')) {
-                e.preventDefault();
-                alert('Formspree ID placeholder: Replace "xxxxxxxx" with your actual Formspree endpoint. Your message would be sent. Call us now for immediate estimate!');
-            } else {
-                // valid Formspree action, let it submit naturally.
-            }
+            // ---- Disable button to prevent double-submit ----
+            submitBtn.disabled = true;
+            submitBtn.textContent = 'Submitting…';
+
+            // ---- Build FormData ----
+            const formData = new FormData(form);
+
+            // ---- Submit to Formspree using fetch ----
+            fetch(form.action, {
+                    method: 'POST',
+                    body: formData,
+                    headers: {
+                        'Accept': 'application/json',
+                    },
+                })
+                .then(function(response) {
+                    if (response.ok) {
+                        setStatus('✅ Thank you! Your request has been submitted.', 'success');
+                        resetForm();
+                    } else {
+                        return response.json().then(function(data) {
+                            const msg = data && data.error ? data.error :
+                                'Something went wrong. Please try again.';
+                            throw new Error(msg);
+                        }).catch(function() {
+                            throw new Error('Server error. Please try again later.');
+                        });
+                    }
+                })
+                .catch(function(error) {
+                    setStatus('❌ ' + error.message, 'error');
+                })
+                .finally(function() {
+                    submitBtn.disabled = false;
+                    submitBtn.textContent = 'Submit';
+                });
         });
-    });
+
+        // ---- Clear status & invalid styles when user types ----
+        allInputs.forEach(function(input) {
+            input.addEventListener('input', function() {
+                if (statusEl.style.display === 'block' || input.classList.contains('is-invalid')) {
+                    clearStatus();
+                    clearInvalidStyles();
+                }
+            });
+            input.addEventListener('change', function() {
+                if (statusEl.style.display === 'block' || input.classList.contains('is-invalid')) {
+                    clearStatus();
+                    clearInvalidStyles();
+                }
+            });
+        });
+
+        // ---- Expose reset function to console (optional) ----
+        window.__resetProductForm = resetForm;
+
+    })();
 </script>
+
 </body>
 </html>
