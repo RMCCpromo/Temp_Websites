@@ -1,0 +1,1038 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>MINNTEX House Cleaning LLC | Residential &amp; Commercial Cleaning — Twin Cities Metro</title>
+<meta name="description" content="MINNTEX House Cleaning LLC provides reliable residential and commercial cleaning across the Minnesota Twin Cities Metro Area and surrounding communities. Call (612) 563-7806 for a free estimate." />
+<meta name="theme-color" content="#0a3550" />
+<link rel="icon" href="https://raw.githubusercontent.com/RMCCpromo/RMCC-Images/refs/heads/main/Main%20Logo%20low.PNG" />
+<meta property="og:title" content="MINNTEX House Cleaning LLC" />
+<meta property="og:description" content="A Cleaner Home. A Fresher Life. Residential &amp; commercial cleaning in the Twin Cities Metro Area." />
+<meta property="og:image" content="https://raw.githubusercontent.com/RMCCpromo/RMCC-Images/refs/heads/main/Main%20Logo%20low.PNG" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+<style>
+  /* ============ TOKENS ============ */
+  :root{
+    --navy:#0a3550;
+    --navy-soft:#0d4266;
+    --blue:#1a6fb5;
+    --teal:#12b3a6;
+    --teal-dark:#0d8f85;
+    --ink:#0f2233;
+    --muted:#5b7186;
+    --line:#e2ecf4;
+    --bg:#ffffff;
+    --bg-soft:#f4f9fc;
+    --bg-tint:#eef7fb;
+    --radius-sm:12px;
+    --radius:18px;
+    --radius-lg:26px;
+    --shadow-xs:0 1px 3px rgba(10,53,80,.06);
+    --shadow-sm:0 4px 14px rgba(10,53,80,.06);
+    --shadow:0 14px 36px rgba(10,53,80,.09);
+    --shadow-lg:0 26px 64px rgba(10,53,80,.14);
+    --header-h:76px;
+    --max:1180px;
+    --font:'Plus Jakarta Sans',system-ui,-apple-system,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;
+  }
+
+  *,*::before,*::after{box-sizing:border-box}
+  html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+  body{
+    margin:0;
+    font-family:var(--font);
+    color:var(--ink);
+    background:var(--bg);
+    line-height:1.65;
+    font-size:16.5px;
+    -webkit-font-smoothing:antialiased;
+    overflow-x:hidden;
+  }
+  body.nav-open{overflow:hidden}
+  img{max-width:100%;display:block}
+  a{color:inherit;text-decoration:none}
+  h1,h2,h3,h4{line-height:1.15;margin:0;letter-spacing:-.02em;font-weight:800}
+  h1{font-size:clamp(2.1rem,5.1vw,3.6rem)}
+  h2{font-size:clamp(1.65rem,3.4vw,2.5rem)}
+  h3{font-size:1.12rem;letter-spacing:-.01em}
+  p{margin:0}
+  ul{margin:0;padding:0;list-style:none}
+  button{font-family:inherit}
+  :focus-visible{outline:3px solid var(--teal);outline-offset:3px;border-radius:6px}
+
+  .container{width:100%;max-width:var(--max);margin-inline:auto;padding-inline:22px}
+  .skip-link{
+    position:absolute;left:16px;top:-60px;z-index:200;background:var(--navy);color:#fff;
+    padding:10px 16px;border-radius:0 0 10px 10px;font-weight:600;transition:top .2s ease;
+  }
+  .skip-link:focus{top:0}
+
+  /* ============ BUTTONS ============ */
+  .btn{
+    display:inline-flex;align-items:center;justify-content:center;gap:10px;
+    padding:14px 26px;border-radius:999px;font-weight:700;font-size:.95rem;
+    border:1.5px solid transparent;cursor:pointer;transition:transform .22s ease,box-shadow .22s ease,background .22s ease,color .22s ease,border-color .22s ease;
+    text-align:center;white-space:nowrap;
+  }
+  .btn svg{flex:none}
+  .btn-primary{
+    background:linear-gradient(135deg,var(--blue),var(--teal-dark));
+    color:#fff;box-shadow:0 10px 24px rgba(17,120,150,.28);
+  }
+  .btn-primary:hover{transform:translateY(-2px);box-shadow:0 16px 32px rgba(17,120,150,.34)}
+  .btn-ghost{background:#fff;color:var(--navy);border-color:var(--line);box-shadow:var(--shadow-xs)}
+  .btn-ghost:hover{transform:translateY(-2px);border-color:#bcd6e6;box-shadow:var(--shadow-sm)}
+  .btn-light{background:#fff;color:var(--navy);box-shadow:0 10px 24px rgba(4,32,50,.24)}
+  .btn-light:hover{transform:translateY(-2px)}
+  .btn-lg{padding:16px 32px;font-size:1rem}
+  .btn-block{width:100%}
+
+  /* ============ HEADER ============ */
+  .site-header{
+    position:sticky;top:0;z-index:100;background:rgba(255,255,255,.92);
+    backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);
+    border-bottom:1px solid transparent;transition:box-shadow .3s ease,border-color .3s ease,background .3s ease;
+  }
+  .site-header.scrolled{box-shadow:0 6px 24px rgba(10,53,80,.09);border-bottom-color:var(--line);background:rgba(255,255,255,.97)}
+  .header-inner{display:flex;align-items:center;justify-content:space-between;gap:18px;min-height:var(--header-h)}
+  .brand{display:flex;align-items:center;gap:12px;min-width:0}
+  .brand-logo{height:48px;width:auto;max-width:172px;object-fit:contain}
+  .brand-text{display:flex;flex-direction:column;line-height:1.1;font-weight:800;letter-spacing:-.02em;color:var(--navy);font-size:1.02rem}
+  .brand-text span{font-size:.7rem;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
+
+  .nav{display:flex;align-items:center;gap:6px}
+  .nav-list{display:flex;align-items:center;gap:2px}
+  .nav-link{
+    display:block;padding:9px 13px;border-radius:999px;font-size:.9rem;font-weight:600;color:#25455c;
+    transition:background .2s ease,color .2s ease;position:relative;
+  }
+  .nav-link:hover{background:var(--bg-tint);color:var(--navy)}
+  .nav-link[aria-current="true"]{color:var(--teal-dark);background:var(--bg-tint)}
+  .nav-cta{margin-left:10px;padding:11px 20px;font-size:.86rem}
+  .nav-toggle{
+    display:none;width:46px;height:46px;border-radius:14px;border:1.5px solid var(--line);background:#fff;
+    align-items:center;justify-content:center;flex-direction:column;gap:5px;cursor:pointer;box-shadow:var(--shadow-xs);
+  }
+  .nav-toggle span{display:block;width:20px;height:2px;background:var(--navy);border-radius:2px;transition:transform .28s ease,opacity .2s ease}
+  .nav-toggle[aria-expanded="true"] span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+  .nav-toggle[aria-expanded="true"] span:nth-child(2){opacity:0}
+  .nav-toggle[aria-expanded="true"] span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+
+  /* ============ HERO ============ */
+  .hero{position:relative;overflow:hidden;padding:clamp(46px,7vw,86px) 0 clamp(56px,7vw,92px);background:
+    radial-gradient(900px 460px at 88% -8%,rgba(18,179,166,.13),transparent 62%),
+    radial-gradient(760px 420px at 4% 4%,rgba(26,111,181,.10),transparent 60%),
+    linear-gradient(180deg,#ffffff,var(--bg-soft));
+  }
+  .hero-grid{display:grid;grid-template-columns:1.04fr .96fr;gap:clamp(34px,5vw,64px);align-items:center}
+  .pill{
+    display:inline-flex;align-items:center;gap:9px;background:#fff;border:1px solid var(--line);
+    color:var(--navy);font-weight:600;font-size:.79rem;letter-spacing:.05em;text-transform:uppercase;
+    padding:8px 16px;border-radius:999px;box-shadow:var(--shadow-xs);margin-bottom:20px;
+  }
+  .dot{width:8px;height:8px;border-radius:50%;background:var(--teal);box-shadow:0 0 0 4px rgba(18,179,166,.18)}
+  .hero h1{margin-bottom:18px}
+  .grad{background:linear-gradient(120deg,var(--blue),var(--teal));-webkit-background-clip:text;background-clip:text;color:transparent}
+  .hero-sub{color:var(--muted);font-size:1.075rem;max-width:56ch;margin-bottom:28px}
+  .hero-actions{display:flex;flex-wrap:wrap;gap:14px;margin-bottom:26px}
+  .hero-trust{display:flex;flex-wrap:wrap;gap:10px 24px;color:#39607a;font-size:.88rem;font-weight:600}
+  .hero-trust li{display:flex;align-items:center;gap:8px}
+  .tick{width:18px;height:18px;border-radius:50%;background:rgba(18,179,166,.14);display:inline-flex;align-items:center;justify-content:center;flex:none}
+
+  .hero-visual{position:relative}
+  .hero-visual::before{
+    content:"";position:absolute;inset:auto -18px -22px -18px;height:78%;
+    background:linear-gradient(140deg,rgba(26,111,181,.16),rgba(18,179,166,.20));
+    filter:blur(46px);border-radius:50%;z-index:0;
+  }
+  .photo-card{
+    position:relative;z-index:1;border-radius:var(--radius-lg);overflow:hidden;background:linear-gradient(140deg,#dbeaf4,#cfe9e6);
+    box-shadow:var(--shadow-lg);border:6px solid #fff;aspect-ratio:4/3;
+  }
+  .photo-card img{width:100%;height:100%;object-fit:cover}
+  .photo-badges{position:absolute;z-index:2;bottom:18px;left:18px;right:18px;display:flex;flex-wrap:wrap;gap:10px}
+  .badge{
+    background:rgba(255,255,255,.96);backdrop-filter:blur(6px);border-radius:14px;padding:10px 14px;
+    box-shadow:var(--shadow-sm);font-size:.79rem;font-weight:700;color:var(--navy);display:flex;align-items:center;gap:8px;
+  }
+
+  /* ============ SECTIONS ============ */
+  section{scroll-margin-top:calc(var(--header-h) + 14px)}
+  .section{padding:clamp(58px,7.5vw,98px) 0}
+  .section-soft{background:var(--bg-soft)}
+  .section-tint{background:linear-gradient(180deg,#ffffff,var(--bg-tint))}
+  .section-head{max-width:720px;margin:0 auto clamp(34px,4.5vw,52px);text-align:center}
+  .section-head.left{margin-inline:0;text-align:left}
+  .eyebrow{
+    display:inline-block;font-size:.76rem;font-weight:800;letter-spacing:.16em;text-transform:uppercase;
+    color:var(--teal-dark);background:rgba(18,179,166,.10);padding:7px 14px;border-radius:999px;margin-bottom:16px;
+  }
+  .section-head p{color:var(--muted);margin-top:14px;font-size:1.02rem}
+
+  /* ============ SERVICES ============ */
+  .card-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(272px,1fr));gap:22px}
+  .card{
+    background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:28px 26px 30px;
+    box-shadow:var(--shadow-xs);transition:transform .28s ease,box-shadow .28s ease,border-color .28s ease;height:100%;
+  }
+  .card:hover{transform:translateY(-5px);box-shadow:var(--shadow);border-color:#cfe4f1}
+  .icon-badge{
+    width:54px;height:54px;border-radius:16px;display:flex;align-items:center;justify-content:center;
+    background:linear-gradient(140deg,rgba(26,111,181,.12),rgba(18,179,166,.16));color:var(--navy-soft);margin-bottom:18px;
+  }
+  .card h3{margin-bottom:8px}
+  .card p{color:var(--muted);font-size:.935rem}
+
+  .feature-card{
+    grid-column:1/-1;border-radius:var(--radius-lg);padding:clamp(28px,4vw,44px);color:#fff;border:none;
+    background:linear-gradient(125deg,var(--navy) 0%,#0d4a6b 52%,#0c6b74 100%);
+    box-shadow:var(--shadow-lg);overflow:hidden;position:relative;display:grid;grid-template-columns:1.15fr .85fr;gap:30px;align-items:center;
+  }
+  .feature-card::after{
+    content:"";position:absolute;width:420px;height:420px;right:-130px;top:-160px;border-radius:50%;
+    background:radial-gradient(circle,rgba(18,179,166,.38),transparent 68%);
+  }
+  .feature-card h3{font-size:clamp(1.3rem,2.4vw,1.75rem);margin-bottom:12px}
+  .feature-card p{color:rgba(255,255,255,.82);font-size:.97rem;max-width:52ch}
+  .feature-card .icon-badge{background:rgba(255,255,255,.14);color:#fff;width:58px;height:58px}
+  .feature-list{display:grid;gap:12px;position:relative;z-index:1}
+  .feature-list li{display:flex;gap:11px;align-items:flex-start;font-size:.92rem;color:rgba(255,255,255,.9);font-weight:500}
+  .feature-list .tick{background:rgba(255,255,255,.18)}
+
+  /* ============ ABOUT ============ */
+  .split{display:grid;grid-template-columns:1fr 1fr;gap:clamp(32px,5vw,64px);align-items:center}
+  .about-photo{border-radius:var(--radius-lg);overflow:hidden;border:6px solid #fff;box-shadow:var(--shadow);background:linear-gradient(140deg,#dbeaf4,#cfe9e6);aspect-ratio:4/3}
+  .about-photo img{width:100%;height:100%;object-fit:cover}
+  .check-list{display:grid;gap:14px;margin-top:24px}
+  .check-list li{display:flex;gap:12px;align-items:flex-start;font-weight:600;color:#26485f;font-size:.96rem}
+  .about-copy p{color:var(--muted);margin-bottom:16px}
+  .mini-stats{display:flex;flex-wrap:wrap;gap:12px;margin-top:26px}
+  .mini-stat{background:#fff;border:1px solid var(--line);border-radius:14px;padding:12px 18px;box-shadow:var(--shadow-xs);font-size:.85rem;font-weight:700;color:var(--navy)}
+
+  /* ============ WHY US ============ */
+  .why-grid{display:grid;grid-template-columns:.85fr 1.15fr;gap:clamp(32px,5vw,60px);align-items:start}
+  .why-panel{
+    background:linear-gradient(150deg,var(--navy),#0c556e 70%,#0d7a78);color:#fff;border-radius:var(--radius-lg);
+    padding:clamp(28px,3.6vw,40px);box-shadow:var(--shadow-lg);position:sticky;top:calc(var(--header-h) + 22px);
+  }
+  .why-panel h2{color:#fff;margin-bottom:14px;font-size:clamp(1.5rem,2.6vw,2rem)}
+  .why-panel p{color:rgba(255,255,255,.82);font-size:.95rem;margin-bottom:22px}
+  .why-rows{display:grid;gap:16px}
+  .why-row{
+    display:flex;gap:18px;background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:22px 24px;
+    box-shadow:var(--shadow-xs);transition:transform .26s ease,box-shadow .26s ease;
+  }
+  .why-row:hover{transform:translateX(4px);box-shadow:var(--shadow-sm)}
+  .why-row h3{margin-bottom:5px}
+  .why-row p{color:var(--muted);font-size:.925rem}
+  .why-num{
+    width:40px;height:40px;flex:none;border-radius:12px;display:flex;align-items:center;justify-content:center;
+    background:linear-gradient(140deg,rgba(26,111,181,.12),rgba(18,179,166,.16));color:var(--navy-soft);font-weight:800;font-size:.9rem;
+  }
+
+  /* ============ SERVICE AREA ============ */
+  .area-wrap{
+    background:#fff;border:1px solid var(--line);border-radius:var(--radius-lg);padding:clamp(28px,4vw,46px);
+    box-shadow:var(--shadow-sm);text-align:center;
+  }
+  .city-grid{display:flex;flex-wrap:wrap;justify-content:center;gap:11px;margin:26px 0 22px}
+  .city{
+    display:inline-flex;align-items:center;gap:9px;background:var(--bg-soft);border:1px solid var(--line);
+    border-radius:999px;padding:10px 18px;font-weight:600;font-size:.9rem;color:#2a4a60;transition:background .2s ease,transform .2s ease,border-color .2s ease;
+  }
+  .city:hover{background:var(--bg-tint);border-color:#c9e2ef;transform:translateY(-2px)}
+  .city svg{color:var(--teal-dark)}
+  .area-note{color:var(--muted);font-size:.92rem}
+
+  /* ============ ESTIMATE / CONTACT FORMS ============ */
+  .estimate-grid{display:grid;grid-template-columns:.82fr 1.18fr;gap:clamp(30px,4.5vw,52px);align-items:start}
+  .info-panel{
+    background:linear-gradient(150deg,#0a3550,#0d4f6d 62%,#0c6f74);color:#fff;border-radius:var(--radius-lg);
+    padding:clamp(28px,3.6vw,40px);box-shadow:var(--shadow-lg);
+  }
+  .info-panel h3{color:#fff;font-size:1.35rem;margin-bottom:12px}
+  .info-panel p{color:rgba(255,255,255,.82);font-size:.94rem;margin-bottom:22px}
+  .info-list{display:grid;gap:14px}
+  .info-list a,.info-list span{
+    display:flex;gap:12px;align-items:center;background:rgba(255,255,255,.09);border:1px solid rgba(255,255,255,.16);
+    border-radius:14px;padding:14px 16px;font-weight:600;font-size:.93rem;transition:background .2s ease,transform .2s ease;
+  }
+  .info-list a:hover{background:rgba(255,255,255,.17);transform:translateY(-2px)}
+  .info-list svg{flex:none;opacity:.95}
+
+  .form-card{
+    background:#fff;border:1px solid var(--line);border-radius:var(--radius-lg);padding:clamp(26px,3.6vw,42px);
+    box-shadow:var(--shadow);
+  }
+  .form-card h3{font-size:1.3rem;margin-bottom:6px}
+  .form-intro{color:var(--muted);font-size:.93rem;margin-bottom:24px}
+  .form-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+  .field{display:flex;flex-direction:column;gap:7px;min-width:0}
+  .field.span-2{grid-column:1/-1}
+  .field label{font-size:.83rem;font-weight:700;color:#2b4c63;letter-spacing:.01em}
+  .field label .req{color:#d64545}
+  .field input,.field select,.field textarea{
+    width:100%;padding:13px 15px;border:1.5px solid var(--line);border-radius:var(--radius-sm);
+    background:#fbfdfe;font-family:inherit;font-size:.945rem;color:var(--ink);transition:border-color .2s ease,box-shadow .2s ease,background .2s ease;
+  }
+  .field textarea{resize:vertical;min-height:112px}
+  .field input:focus,.field select:focus,.field textarea:focus{
+    outline:none;border-color:var(--teal);background:#fff;box-shadow:0 0 0 4px rgba(18,179,166,.14);
+  }
+  .field select{
+    appearance:none;-webkit-appearance:none;padding-right:42px;cursor:pointer;
+    background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='9' viewBox='0 0 14 9'%3E%3Cpath fill='none' stroke='%235b7186' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' d='M1.5 1.5 7 7l5.5-5.5'/%3E%3C/svg%3E");
+    background-repeat:no-repeat;background-position:right 16px center;
+  }
+  .form-foot{display:flex;flex-wrap:wrap;align-items:center;gap:16px;margin-top:24px}
+  .form-note{color:var(--muted);font-size:.82rem;flex:1 1 220px;min-width:200px}
+  .form-actions{margin-top:24px;display:flex;flex-wrap:wrap;gap:14px;align-items:center}
+  .status{
+    display:none;margin-top:18px;padding:14px 16px;border-radius:var(--radius-sm);font-size:.9rem;font-weight:600;text-align:left;
+  }
+  .status.show{display:block}
+  .status.ok{background:rgba(18,179,166,.11);color:#0a6b64;border:1px solid rgba(18,179,166,.3)}
+  .status.err{background:rgba(214,69,69,.09);color:#a53030;border:1px solid rgba(214,69,69,.28)}
+  .status.warn{background:rgba(26,111,181,.09);color:#175a8c;border:1px solid rgba(26,111,181,.26)}
+  .honey{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}
+
+  .contact-info-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(228px,1fr));gap:18px;margin-bottom:30px}
+  .contact-tile{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:24px;box-shadow:var(--shadow-xs);text-align:left}
+  .contact-tile h3{font-size:1rem;margin:14px 0 6px}
+  .contact-tile a,.contact-tile p{color:var(--muted);font-size:.93rem;font-weight:600;word-break:break-word}
+  .contact-tile a:hover{color:var(--teal-dark)}
+  .contact-tile .icon-badge{width:48px;height:48px;border-radius:14px;margin-bottom:6px}
+
+  /* ============ FOOTER ============ */
+  .site-footer{background:#082b42;color:rgba(255,255,255,.76);padding:clamp(46px,5.5vw,70px) 0 0;position:relative;overflow:hidden}
+  .site-footer::before{
+    content:"";position:absolute;width:520px;height:520px;right:-180px;top:-260px;border-radius:50%;
+    background:radial-gradient(circle,rgba(18,179,166,.20),transparent 66%);
+  }
+  .footer-grid{display:grid;grid-template-columns:1.35fr .85fr .9fr 1fr;gap:34px;position:relative;z-index:1}
+  .footer-brand-card{
+    display:inline-flex;align-items:center;justify-content:center;background:#fff;border-radius:16px;padding:14px 18px;
+    box-shadow:var(--shadow-sm);margin-bottom:18px;max-width:230px;
+  }
+  .footer-brand-card img{height:62px;width:auto;object-fit:contain}
+  .site-footer h4{color:#fff;font-size:.8rem;letter-spacing:.15em;text-transform:uppercase;margin-bottom:16px}
+  .footer-links{display:grid;gap:10px}
+  .footer-links a,.footer-contact a,.footer-contact span{font-size:.92rem;color:rgba(255,255,255,.76);transition:color .2s ease}
+  .footer-links a:hover,.footer-contact a:hover{color:#8fe9e0}
+  .footer-contact{display:grid;gap:10px}
+  .footer-about{font-size:.92rem;color:rgba(255,255,255,.7);max-width:38ch}
+  .footer-bottom{
+    margin-top:clamp(30px,4vw,48px);border-top:1px solid rgba(255,255,255,.12);padding:22px 0;
+    display:flex;flex-wrap:wrap;gap:10px 20px;justify-content:space-between;align-items:center;font-size:.85rem;position:relative;z-index:1;
+  }
+
+  /* ============ ANIMATIONS ============ */
+  .reveal{opacity:0;transform:translateY(22px);transition:opacity .75s cubic-bezier(.22,.68,.3,1),transform .75s cubic-bezier(.22,.68,.3,1)}
+  .reveal.in{opacity:1;transform:none}
+  .card-grid>.reveal:nth-child(2){transition-delay:.07s}
+  .card-grid>.reveal:nth-child(3){transition-delay:.14s}
+  .card-grid>.reveal:nth-child(4){transition-delay:.06s}
+  .card-grid>.reveal:nth-child(5){transition-delay:.13s}
+  .card-grid>.reveal:nth-child(6){transition-delay:.2s}
+  .why-rows>.reveal:nth-child(2){transition-delay:.06s}
+  .why-rows>.reveal:nth-child(3){transition-delay:.12s}
+  .why-rows>.reveal:nth-child(4){transition-delay:.18s}
+  .why-rows>.reveal:nth-child(5){transition-delay:.24s}
+
+  /* ============ RESPONSIVE ============ */
+  @media (max-width:1080px){
+    .nav-cta{display:none}
+    .nav-link{padding:9px 11px;font-size:.86rem}
+  }
+  @media (max-width:980px){
+    .nav-toggle{display:flex}
+    .nav{
+      position:fixed;left:0;right:0;top:var(--header-h);background:#fff;flex-direction:column;align-items:stretch;
+      padding:18px 22px 26px;gap:6px;box-shadow:0 22px 40px rgba(10,53,80,.16);border-bottom:1px solid var(--line);
+      transform:translateY(-130%);opacity:0;visibility:hidden;pointer-events:none;
+      transition:transform .34s cubic-bezier(.24,.7,.28,1),opacity .28s ease,visibility .28s ease;
+      max-height:calc(100dvh - var(--header-h));overflow-y:auto;
+    }
+    .nav.open{transform:translateY(0);opacity:1;visibility:visible;pointer-events:auto}
+    .nav-list{flex-direction:column;align-items:stretch;gap:2px}
+    .nav-link{padding:14px 14px;border-radius:12px;font-size:.98rem;border-bottom:1px solid var(--line)}
+    .nav-list li:last-child .nav-link{border-bottom:none}
+    .nav .nav-cta{display:inline-flex;margin:14px 0 0;width:100%;padding:15px 22px}
+    .hero-grid{grid-template-columns:1fr;gap:38px}
+    .hero-visual{order:-1}
+    .hero-sub{max-width:none}
+    .split,.why-grid,.estimate-grid,.feature-card{grid-template-columns:1fr}
+    .feature-card{grid-template-columns:1fr;gap:24px}
+    .why-panel{position:static}
+    .footer-grid{grid-template-columns:1fr 1fr}
+  }
+  @media (max-width:640px){
+    body{font-size:16px}
+    .container{padding-inline:18px}
+    .brand-logo{height:42px;max-width:140px}
+    .brand-text{display:none}
+    .hero{padding-top:34px}
+    .hero-actions .btn{width:100%}
+    .form-grid{grid-template-columns:1fr}
+    .footer-grid{grid-template-columns:1fr;gap:30px}
+    .footer-bottom{justify-content:flex-start}
+    .photo-badges{position:static;margin:14px 0 0}
+    .photo-card{aspect-ratio:5/4}
+  }
+  @media (prefers-reduced-motion:reduce){
+    html{scroll-behavior:auto}
+    *,*::before,*::after{animation-duration:.001ms !important;transition-duration:.001ms !important}
+    .reveal{opacity:1;transform:none}
+  }
+</style>
+</head>
+<body>
+<a class="skip-link" href="#home">Skip to main content</a>
+
+<!-- ================= HEADER ================= -->
+<header class="site-header" id="siteHeader">
+  <div class="container header-inner">
+    <a class="brand" href="#home" aria-label="MINNTEX House Cleaning LLC — home">
+      <img class="brand-logo" src="https://raw.githubusercontent.com/RMCCpromo/RMCC-Images/refs/heads/main/Main%20Logo%20low.PNG" alt="MINNTEX House Cleaning LLC logo" />
+      <span class="brand-text">MINNTEX<span>House Cleaning LLC</span></span>
+    </a>
+
+    <nav class="nav" id="primaryNav" aria-label="Main navigation">
+      <ul class="nav-list">
+        <li><a class="nav-link" href="#home">Home</a></li>
+        <li><a class="nav-link" href="#services">Services</a></li>
+        <li><a class="nav-link" href="#about">About Us</a></li>
+        <li><a class="nav-link" href="#why">Why Choose Us</a></li>
+        <li><a class="nav-link" href="#service-area">Service Area</a></li>
+        <li><a class="nav-link" href="#estimate">Get Estimate</a></li>
+        <li><a class="nav-link" href="#contact">Contact</a></li>
+      </ul>
+      <a class="btn btn-primary nav-cta" href="#estimate">Get a Free Estimate</a>
+    </nav>
+
+    <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="primaryNav" aria-label="Open menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<main>
+  <!-- ================= HERO ================= -->
+  <section class="hero" id="home">
+    <div class="container hero-grid">
+      <div class="hero-copy">
+        <span class="pill"><span class="dot"></span> Twin Cities Metro &amp; Surrounding Communities</span>
+        <h1>A Cleaner Home.<br><span class="grad">A Fresher Life.</span></h1>
+        <p class="hero-sub">
+          MINNTEX House Cleaning LLC provides dependable residential and commercial cleaning services throughout
+          the Minnesota Twin Cities Metro Area. From routine house cleaning to deep cleans and move-in / move-out
+          service, we focus on the details so your space feels fresh, comfortable, and welcoming.
+        </p>
+        <div class="hero-actions">
+          <a class="btn btn-primary btn-lg" href="#estimate">
+            Get a Free Estimate
+            <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </a>
+          <a class="btn btn-ghost btn-lg" href="tel:+16125637806">
+            <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6.6 3h3l1.5 4-2 1.4a13 13 0 0 0 6.1 6.1l1.4-2 4 1.5v3A2 2 0 0 1 18.6 19 16.6 16.6 0 0 1 5 5.4 2 2 0 0 1 6.6 3z"/></svg>
+            Call Us: (612) 563-7806
+          </a>
+        </div>
+        <ul class="hero-trust">
+          <li><span class="tick"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="#0d8f85" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12.6 9.2 18 20 6.5"/></svg></span> Residential &amp; commercial</li>
+          <li><span class="tick"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="#0d8f85" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12.6 9.2 18 20 6.5"/></svg></span> Free estimates</li>
+          <li><span class="tick"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="#0d8f85" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12.6 9.2 18 20 6.5"/></svg></span> Recurring or one-time</li>
+        </ul>
+      </div>
+
+      <div class="hero-visual">
+        <div class="photo-card">
+          <img src="https://mcp-tools-z-image-turbo.hf.space/--replicas/mm28x/gradio_api/file=/tmp/gradio/66b84805c64d0524668cae25ca27a05e86e928c7d483f8c89382e6ff7acb44d7/image.webp"
+               alt="Bright, freshly cleaned living room in a Minnesota home" loading="eager"
+               onerror="this.style.display='none'" />
+        </div>
+        <div class="photo-badges">
+          <span class="badge"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#0d8f85" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 10.6 12 3l9 7.6M5.5 9.4V21h13V9.4"/></svg> Homes &amp; Offices</span>
+          <span class="badge"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#0d8f85" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2.6 13.9 8.4 19.7 10.3 13.9 12.2 12 18 10.1 12.2 4.3 10.3 10.1 8.4z"/></svg> Detail-Focused</span>
+          <span class="badge"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#0d8f85" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s7-5.4 7-11a7 7 0 1 0-14 0c0 5.6 7 11 7 11z"/><circle cx="12" cy="10" r="2.6"/></svg> Twin Cities Metro</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= SERVICES ================= -->
+  <section class="section section-soft" id="services">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="eyebrow">Our Services</span>
+        <h2>Cleaning Services Built Around Your Space</h2>
+        <p>Whether you need a regular cleaning routine, a thorough deep clean, or help getting a property ready, MINNTEX House Cleaning LLC offers flexible options for homes, apartments, condos, and commercial spaces.</p>
+      </div>
+
+      <div class="card-grid">
+        <article class="card reveal">
+          <div class="icon-badge"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 10.6 12 3l9 7.6"/><path d="M5.5 9.4V21h13V9.4"/><path d="M10 21v-6h4v6"/></svg></div>
+          <h3>Regular House Cleaning</h3>
+          <p>Consistent, top-to-bottom cleaning that keeps your home comfortable week after week — floors, surfaces, dusting, and the everyday spaces you live in.</p>
+        </article>
+
+        <article class="card reveal">
+          <div class="icon-badge"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2.6 13.9 8.4 19.7 10.3 13.9 12.2 12 18 10.1 12.2 4.3 10.3 10.1 8.4z"/><path d="M18.6 16.4l.7 2 2 .7-2 .7-.7 2-.7-2-2-.7 2-.7z"/></svg></div>
+          <h3>Deep Cleaning</h3>
+          <p>A detailed, intensive clean that reaches the areas a routine cleaning doesn't — baseboards, vents, edges, buildup, and hard-to-reach spots.</p>
+        </article>
+
+        <article class="card reveal">
+          <div class="icon-badge"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 7.6 12 3l9 4.6v9.2L12 21l-9-4.2z"/><path d="M3 7.6 12 12l9-4.4M12 12v9"/></svg></div>
+          <h3>Move-In / Move-Out Cleaning</h3>
+          <p>Start fresh in a new place or leave your old one spotless — a thorough clean of empty or newly emptied homes from room to room.</p>
+        </article>
+
+        <article class="card reveal">
+          <div class="icon-badge"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 21V6.4L11 3v18"/><path d="M11 21V9.6L19 12v9"/><path d="M7 8.2h.01M7 12h.01M7 15.8h.01M15 14.6h.01M15 18h.01"/></svg></div>
+          <h3>Apartment &amp; Condo Cleaning</h3>
+          <p>Efficient cleaning for smaller footprints, shared walls, and tight schedules — tailored to apartments, condos, and townhomes.</p>
+        </article>
+
+        <article class="card reveal">
+          <div class="icon-badge"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3s6 6.3 6 10.3a6 6 0 0 1-12 0C6 9.3 12 3 12 3z"/></svg></div>
+          <h3>Kitchen &amp; Bathroom Cleaning</h3>
+          <p>Focused attention on the rooms that need it most — counters, cabinets, sinks, showers, tubs, toilets, tile, and fixtures.</p>
+        </article>
+
+        <article class="card reveal">
+          <div class="icon-badge"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="2.5"/><path d="M8 3v4M16 3v4M3 10h18"/><path d="M9 15h6m-2.6-2.6L15 15l-2.6 2.6"/></svg></div>
+          <h3>Recurring Cleaning</h3>
+          <p>Weekly, bi-weekly, or monthly visits so your home stays consistently clean without you having to think about it.</p>
+        </article>
+
+        <article class="feature-card reveal">
+          <div>
+            <div class="icon-badge"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="7.4" width="18" height="12.6" rx="2.5"/><path d="M9 7.4V6a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v1.4"/><path d="M3 13h18"/><path d="M11 13v2h2v-2"/></svg></div>
+            <h3>Commercial Cleaning</h3>
+            <p>Clean, presentable spaces for offices, retail, rental properties, and small businesses across the Twin Cities Metro Area — scheduled around your hours.</p>
+          </div>
+          <ul class="feature-list">
+            <li><span class="tick"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12.6 9.2 18 20 6.5"/></svg></span> Offices, storefronts &amp; rental units</li>
+            <li><span class="tick"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12.6 9.2 18 20 6.5"/></svg></span> One-time, recurring &amp; custom schedules</li>
+            <li><span class="tick"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12.6 9.2 18 20 6.5"/></svg></span> Free estimates — call (612) 563-7806</li>
+          </ul>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= ABOUT ================= -->
+  <section class="section" id="about">
+    <div class="container split">
+      <div class="about-photo reveal">
+        <img src="https://mcp-tools-z-image-turbo.hf.space/--replicas/mm28x/gradio_api/file=/tmp/gradio/b3eec61c206c43b2ad433427fc3066ab2cb7f175d2bf39345fe29cdc200d617f/image.webp"
+             alt="Cleaning professional wiping down a bright kitchen counter" loading="lazy" onerror="this.style.display='none'" />
+      </div>
+      <div class="about-copy reveal">
+        <span class="eyebrow">About Us</span>
+        <h2>A Professional, Reliable, Local Cleaning Service</h2>
+        <p>
+          MINNTEX House Cleaning LLC is a locally based cleaning company serving the Minnesota Twin Cities Metro Area
+          and surrounding communities. We clean homes, apartments, condos, and commercial spaces — and we treat every
+          space we clean like it matters, because it's yours.
+        </p>
+        <p>
+          What sets a good cleaning service apart is consistency: showing up, communicating clearly, paying attention to
+          the details, and respecting your home and your time. That's the standard we hold ourselves to on every visit.
+        </p>
+        <ul class="check-list">
+          <li><span class="tick"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="#0d8f85" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12.6 9.2 18 20 6.5"/></svg></span> Residential and commercial cleaning</li>
+          <li><span class="tick"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="#0d8f85" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12.6 9.2 18 20 6.5"/></svg></span> Serving Minneapolis, St. Paul &amp; nearby communities</li>
+          <li><span class="tick"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="#0d8f85" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12.6 9.2 18 20 6.5"/></svg></span> Flexible one-time and recurring options</li>
+          <li><span class="tick"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="#0d8f85" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12.6 9.2 18 20 6.5"/></svg></span> Free, no-pressure estimates</li>
+        </ul>
+        <div class="mini-stats">
+          <span class="mini-stat">Locally Owned &amp; Operated</span>
+          <span class="mini-stat">Free Estimates</span>
+          <a class="mini-stat" href="tel:+16125637806">(612) 563-7806</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= WHY CHOOSE US ================= -->
+  <section class="section section-soft" id="why">
+    <div class="container why-grid">
+      <div class="why-panel reveal">
+        <span class="eyebrow" style="background:rgba(255,255,255,.14);color:#9ff0e8">Why Choose Us</span>
+        <h2>Cleaning You Can Count On</h2>
+        <p>Choosing a cleaning company comes down to trust. Here's what you can expect when you book with MINNTEX House Cleaning LLC.</p>
+        <a class="btn btn-light btn-block" href="#estimate">Get a Free Estimate</a>
+        <p style="margin:16px 0 0;font-size:.86rem;color:rgba(255,255,255,.68)">Or call <a href="tel:+16125637806" style="color:#9ff0e8;font-weight:700">(612) 563-7806</a></p>
+      </div>
+
+      <div class="why-rows">
+        <article class="why-row reveal">
+          <div class="why-num">01</div>
+          <div>
+            <h3>Reliable Service</h3>
+            <p>We honor the schedule we agree to and treat each appointment as a commitment — so you're never left wondering if we'll show up.</p>
+          </div>
+        </article>
+        <article class="why-row reveal">
+          <div class="why-num">02</div>
+          <div>
+            <h3>Attention to Detail</h3>
+            <p>Edges, corners, fixtures, and the little things that get overlooked. The details are what make a space actually feel clean.</p>
+          </div>
+        </article>
+        <article class="why-row reveal">
+          <div class="why-num">03</div>
+          <div>
+            <h3>Professional &amp; Respectful</h3>
+            <p>Friendly, courteous, and careful in your home or business. We work to leave your space looking better than we found it.</p>
+          </div>
+        </article>
+        <article class="why-row reveal">
+          <div class="why-num">04</div>
+          <div>
+            <h3>Flexible Cleaning Options</h3>
+            <p>Weekly, bi-weekly, monthly, or one-time — plus deep cleans and move-in / move-out service. You choose what fits your life.</p>
+          </div>
+        </article>
+        <article class="why-row reveal">
+          <div class="why-num">05</div>
+          <div>
+            <h3>Local Service</h3>
+            <p>We're based right here in the Twin Cities Metro Area and serve surrounding communities — local, accessible, and easy to reach.</p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= SERVICE AREA ================= -->
+  <section class="section" id="service-area">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="eyebrow">Service Area</span>
+        <h2>Proudly Serving the Twin Cities Metro Area</h2>
+        <p>MINNTEX House Cleaning LLC provides residential and commercial cleaning throughout the Minnesota Twin Cities Metro Area and surrounding communities.</p>
+      </div>
+
+      <div class="area-wrap reveal">
+        <div class="city-grid">
+          <span class="city"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s7-5.4 7-11a7 7 0 1 0-14 0c0 5.6 7 11 7 11z"/><circle cx="12" cy="10" r="2.6"/></svg>Minneapolis</span>
+          <span class="city"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s7-5.4 7-11a7 7 0 1 0-14 0c0 5.6 7 11 7 11z"/><circle cx="12" cy="10" r="2.6"/></svg>St. Paul</span>
+          <span class="city"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s7-5.4 7-11a7 7 0 1 0-14 0c0 5.6 7 11 7 11z"/><circle cx="12" cy="10" r="2.6"/></svg>Maple Grove</span>
+          <span class="city"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s7-5.4 7-11a7 7 0 1 0-14 0c0 5.6 7 11 7 11z"/><circle cx="12" cy="10" r="2.6"/></svg>Plymouth</span>
+          <span class="city"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s7-5.4 7-11a7 7 0 1 0-14 0c0 5.6 7 11 7 11z"/><circle cx="12" cy="10" r="2.6"/></svg>Brooklyn Park</span>
+          <span class="city"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s7-5.4 7-11a7 7 0 1 0-14 0c0 5.6 7 11 7 11z"/><circle cx="12" cy="10" r="2.6"/></svg>Eden Prairie</span>
+          <span class="city"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s7-5.4 7-11a7 7 0 1 0-14 0c0 5.6 7 11 7 11z"/><circle cx="12" cy="10" r="2.6"/></svg>Bloomington</span>
+          <span class="city"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s7-5.4 7-11a7 7 0 1 0-14 0c0 5.6 7 11 7 11z"/><circle cx="12" cy="10" r="2.6"/></svg>Edina</span>
+          <span class="city"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s7-5.4 7-11a7 7 0 1 0-14 0c0 5.6 7 11 7 11z"/><circle cx="12" cy="10" r="2.6"/></svg>Eagan</span>
+          <span class="city"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s7-5.4 7-11a7 7 0 1 0-14 0c0 5.6 7 11 7 11z"/><circle cx="12" cy="10" r="2.6"/></svg>Burnsville</span>
+          <span class="city"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s7-5.4 7-11a7 7 0 1 0-14 0c0 5.6 7 11 7 11z"/><circle cx="12" cy="10" r="2.6"/></svg>Woodbury</span>
+          <span class="city"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s7-5.4 7-11a7 7 0 1 0-14 0c0 5.6 7 11 7 11z"/><circle cx="12" cy="10" r="2.6"/></svg>Coon Rapids</span>
+          <span class="city"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s7-5.4 7-11a7 7 0 1 0-14 0c0 5.6 7 11 7 11z"/><circle cx="12" cy="10" r="2.6"/></svg>Blaine</span>
+          <span class="city"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s7-5.4 7-11a7 7 0 1 0-14 0c0 5.6 7 11 7 11z"/><circle cx="12" cy="10" r="2.6"/></svg>Champlin</span>
+        </div>
+        <p class="area-note">…and nearby communities throughout the Twin Cities Metro Area. Not sure if you're in our service area? Give us a call at <a href="tel:+16125637806" style="color:var(--teal-dark);font-weight:700">(612) 563-7806</a> and we'll let you know.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= GET A FREE ESTIMATE ================= -->
+  <section class="section section-tint" id="estimate">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="eyebrow">Get a Free Estimate</span>
+        <h2>Request Your Free Cleaning Estimate</h2>
+        <p>Tell us a little about your space and what you're looking for. Fill out the form below and we'll follow up to discuss your cleaning options.</p>
+      </div>
+
+      <div class="estimate-grid">
+        <aside class="info-panel reveal">
+          <h3>Why request an estimate?</h3>
+          <p>Every home and business is different. An estimate lets us recommend the right service, frequency, and plan for your space — with no obligation.</p>
+          <div class="info-list">
+            <a href="tel:+16125637806">
+              <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6.6 3h3l1.5 4-2 1.4a13 13 0 0 0 6.1 6.1l1.4-2 4 1.5v3A2 2 0 0 1 18.6 19 16.6 16.6 0 0 1 5 5.4 2 2 0 0 1 6.6 3z"/></svg>
+              (612) 563-7806
+            </a>
+            <a href="mailto:info@minntexcleaning.com">
+              <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2.4"/><path d="m3.6 6.5 8.4 6 8.4-6"/></svg>
+              info@minntexcleaning.com
+            </a>
+            <span>
+              <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s7-5.4 7-11a7 7 0 1 0-14 0c0 5.6 7 11 7 11z"/><circle cx="12" cy="10" r="2.6"/></svg>
+              Twin Cities Metro &amp; surrounding communities
+            </span>
+          </div>
+        </aside>
+
+        <div class="form-card reveal">
+          <h3>Free Estimate Request</h3>
+          <p class="form-intro">Fields marked with <span style="color:#d64545">*</span> are required.</p>
+
+          <form action="https://formspree.io/f/YOUR_FORMSPREE_ID" method="POST" data-form novalidate>
+            <input type="hidden" name="_subject" value="New Free Estimate Request — MINNTEX House Cleaning LLC" />
+            <input type="hidden" name="form_type" value="Free Estimate Request" />
+            <div class="honey" aria-hidden="true"><label for="est-hp">Leave this field empty</label><input id="est-hp" type="text" name="_gotcha" tabindex="-1" autocomplete="off" /></div>
+
+            <div class="form-grid">
+              <div class="field span-2">
+                <label for="est-name">Full Name <span class="req">*</span></label>
+                <input id="est-name" name="name" type="text" autocomplete="name" placeholder="Jane Doe" required />
+              </div>
+              <div class="field">
+                <label for="est-phone">Phone <span class="req">*</span></label>
+                <input id="est-phone" name="phone" type="tel" autocomplete="tel" placeholder="(612) 555-0123" required />
+              </div>
+              <div class="field">
+                <label for="est-email">Email <span class="req">*</span></label>
+                <input id="est-email" name="email" type="email" autocomplete="email" placeholder="you@example.com" required />
+              </div>
+              <div class="field span-2">
+                <label for="est-address">Street Address</label>
+                <input id="est-address" name="address" type="text" autocomplete="street-address" placeholder="123 Main Street" />
+              </div>
+              <div class="field">
+                <label for="est-city">City <span class="req">*</span></label>
+                <input id="est-city" name="city" type="text" autocomplete="address-level2" placeholder="Minneapolis" required />
+              </div>
+              <div class="field">
+                <label for="est-zip">ZIP Code <span class="req">*</span></label>
+                <input id="est-zip" name="zip" type="text" inputmode="numeric" autocomplete="postal-code" placeholder="55401" pattern="[0-9]{5}(-[0-9]{4})?" required />
+              </div>
+
+              <div class="field">
+                <label for="est-cleaning-type">Cleaning Type <span class="req">*</span></label>
+                <select id="est-cleaning-type" name="cleaning_type" required>
+                  <option value="" selected disabled>Select a cleaning type</option>
+                  <option>Regular House Cleaning</option>
+                  <option>Deep Cleaning</option>
+                  <option>Move-In / Move-Out Cleaning</option>
+                  <option>Apartment &amp; Condo Cleaning</option>
+                  <option>Kitchen &amp; Bathroom Cleaning</option>
+                  <option>Recurring Cleaning</option>
+                  <option>Commercial Cleaning</option>
+                </select>
+              </div>
+              <div class="field">
+                <label for="est-frequency">Frequency <span class="req">*</span></label>
+                <select id="est-frequency" name="frequency" required>
+                  <option value="" selected disabled>Select frequency</option>
+                  <option>One-Time</option>
+                  <option>Weekly</option>
+                  <option>Bi-Weekly (Every 2 Weeks)</option>
+                  <option>Monthly</option>
+                  <option>Not Sure Yet</option>
+                </select>
+              </div>
+
+              <div class="field">
+                <label for="est-size">Home Size</label>
+                <select id="est-size" name="home_size">
+                  <option value="" selected disabled>Select approximate size</option>
+                  <option>Studio / Under 600 sq ft</option>
+                  <option>600 – 1,000 sq ft</option>
+                  <option>1,000 – 1,500 sq ft</option>
+                  <option>1,500 – 2,000 sq ft</option>
+                  <option>2,000 – 3,000 sq ft</option>
+                  <option>Over 3,000 sq ft</option>
+                  <option>Commercial Space</option>
+                </select>
+              </div>
+              <div class="field">
+                <label for="est-bedrooms">Bedrooms</label>
+                <select id="est-bedrooms" name="bedrooms">
+                  <option value="" selected disabled>Select</option>
+                  <option>0 (Studio)</option>
+                  <option>1</option><option>2</option><option>3</option><option>4</option><option>5</option><option>6+</option>
+                </select>
+              </div>
+              <div class="field">
+                <label for="est-bathrooms">Bathrooms</label>
+                <select id="est-bathrooms" name="bathrooms">
+                  <option value="" selected disabled>Select</option>
+                  <option>1</option><option>1.5</option><option>2</option><option>2.5</option><option>3</option><option>4+</option>
+                </select>
+              </div>
+              <div class="field">
+                <label for="est-date">Preferred Date</label>
+                <input id="est-date" name="preferred_date" type="date" />
+              </div>
+
+              <div class="field span-2">
+                <label for="est-details">Additional Details</label>
+                <textarea id="est-details" name="additional_details" rows="4" placeholder="Tell us about your space, any pets, areas that need extra attention, or anything else we should know."></textarea>
+              </div>
+            </div>
+
+            <div class="form-actions">
+              <button class="btn btn-primary btn-lg" type="submit">Request My Free Estimate</button>
+              <span class="form-note">We'll get back to you to confirm details. No obligation.</span>
+            </div>
+            <p class="status" data-status role="status" aria-live="polite"></p>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= CONTACT ================= -->
+  <section class="section" id="contact">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="eyebrow">Contact</span>
+        <h2>Let's Talk About Your Cleaning Needs</h2>
+        <p>Have a question or ready to book? Call, email, or send us a message — we're happy to help.</p>
+      </div>
+
+      <div class="contact-info-grid">
+        <div class="contact-tile reveal">
+          <div class="icon-badge"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6.6 3h3l1.5 4-2 1.4a13 13 0 0 0 6.1 6.1l1.4-2 4 1.5v3A2 2 0 0 1 18.6 19 16.6 16.6 0 0 1 5 5.4 2 2 0 0 1 6.6 3z"/></svg></div>
+          <h3>Call or Text</h3>
+          <a href="tel:+16125637806">(612) 563-7806</a>
+        </div>
+        <div class="contact-tile reveal">
+          <div class="icon-badge"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2.4"/><path d="m3.6 6.5 8.4 6 8.4-6"/></svg></div>
+          <h3>Email Us</h3>
+          <a href="mailto:info@minntexcleaning.com">info@minntexcleaning.com</a>
+        </div>
+        <div class="contact-tile reveal">
+          <div class="icon-badge"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s7-5.4 7-11a7 7 0 1 0-14 0c0 5.6 7 11 7 11z"/><circle cx="12" cy="10" r="2.6"/></svg></div>
+          <h3>Service Area</h3>
+          <p>Twin Cities Metro Area &amp; surrounding Minnesota communities</p>
+        </div>
+      </div>
+
+      <div class="form-card reveal">
+        <h3>Send Us a Message</h3>
+        <p class="form-intro">Fields marked with <span style="color:#d64545">*</span> are required.</p>
+        <form action="https://formspree.io/f/YOUR_FORMSPREE_ID" method="POST" data-form novalidate>
+          <input type="hidden" name="_subject" value="New Contact Message — MINNTEX House Cleaning LLC" />
+          <input type="hidden" name="form_type" value="Contact Form" />
+          <div class="honey" aria-hidden="true"><label for="ct-hp">Leave this field empty</label><input id="ct-hp" type="text" name="_gotcha" tabindex="-1" autocomplete="off" /></div>
+
+          <div class="form-grid">
+            <div class="field">
+              <label for="ct-name">Name <span class="req">*</span></label>
+              <input id="ct-name" name="name" type="text" autocomplete="name" placeholder="Your name" required />
+            </div>
+            <div class="field">
+              <label for="ct-phone">Phone</label>
+              <input id="ct-phone" name="phone" type="tel" autocomplete="tel" placeholder="(612) 555-0123" />
+            </div>
+            <div class="field span-2">
+              <label for="ct-email">Email <span class="req">*</span></label>
+              <input id="ct-email" name="email" type="email" autocomplete="email" placeholder="you@example.com" required />
+            </div>
+            <div class="field span-2">
+              <label for="ct-message">Message <span class="req">*</span></label>
+              <textarea id="ct-message" name="message" rows="5" placeholder="How can we help?" required></textarea>
+            </div>
+          </div>
+
+          <div class="form-actions">
+            <button class="btn btn-primary btn-lg" type="submit">Send Message</button>
+            <span class="form-note">Prefer to talk? Call <a href="tel:+16125637806" style="color:var(--teal-dark);font-weight:700">(612) 563-7806</a>.</span>
+          </div>
+          <p class="status" data-status role="status" aria-live="polite"></p>
+        </form>
+      </div>
+    </div>
+  </section>
+</main>
+
+<!-- ================= FOOTER ================= -->
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-brand-card">
+          <img src="https://raw.githubusercontent.com/RMCCpromo/RMCC-Images/refs/heads/main/Main%20Logo%20low.PNG" alt="MINNTEX House Cleaning LLC logo" loading="lazy" />
+        </div>
+        <h4>MINNTEX House Cleaning LLC</h4>
+        <p class="footer-about">Residential and commercial cleaning serving the Minnesota Twin Cities Metro Area and surrounding communities.</p>
+      </div>
+
+      <div>
+        <h4>Contact</h4>
+        <div class="footer-contact">
+          <a href="tel:+16125637806">(612) 563-7806</a>
+          <a href="mailto:info@minntexcleaning.com">info@minntexcleaning.com</a>
+        </div>
+      </div>
+
+      <div>
+        <h4>Service Area</h4>
+        <p class="footer-about">Minneapolis, St. Paul, Maple Grove, Plymouth, Brooklyn Park, Eden Prairie, Bloomington, Edina, Eagan, Burnsville, Woodbury, Coon Rapids, Blaine, Champlin &amp; nearby communities.</p>
+      </div>
+
+      <div>
+        <h4>Navigation</h4>
+        <ul class="footer-links">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#about">About Us</a></li>
+          <li><a href="#why">Why Choose Us</a></li>
+          <li><a href="#service-area">Service Area</a></li>
+          <li><a href="#estimate">Get Estimate</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>© 2026 MINNTEX HOUSE CLEANING LLC. All Rights Reserved.</p>
+      <p>Twin Cities Metro Area, Minnesota</p>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function () {
+  'use strict';
+
+  var header = document.getElementById('siteHeader');
+  var toggle = document.getElementById('navToggle');
+  var nav = document.getElementById('primaryNav');
+  var navLinks = Array.prototype.slice.call(document.querySelectorAll('.nav-link'));
+
+  /* ---------- Mobile menu ---------- */
+  function closeNav() {
+    nav.classList.remove('open');
+    toggle.setAttribute('aria-expanded', 'false');
+    toggle.setAttribute('aria-label', 'Open menu');
+    document.body.classList.remove('nav-open');
+  }
+  function openNav() {
+    nav.classList.add('open');
+    toggle.setAttribute('aria-expanded', 'true');
+    toggle.setAttribute('aria-label', 'Close menu');
+    document.body.classList.add('nav-open');
+  }
+  toggle.addEventListener('click', function () {
+    if (nav.classList.contains('open')) { closeNav(); } else { openNav(); }
+  });
+  navLinks.forEach(function (link) {
+    link.addEventListener('click', function () {
+      if (nav.classList.contains('open')) { closeNav(); }
+    });
+  });
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape' && nav.classList.contains('open')) { closeNav(); toggle.focus(); }
+  });
+  window.addEventListener('resize', function () {
+    if (window.innerWidth > 980 && nav.classList.contains('open')) { closeNav(); }
+  });
+
+  /* ---------- Header shadow ---------- */
+  function onScroll() {
+    if (window.scrollY > 8) { header.classList.add('scrolled'); }
+    else { header.classList.remove('scrolled'); }
+  }
+  onScroll();
+  window.addEventListener('scroll', onScroll, { passive: true });
+
+  /* ---------- Reveal on scroll ---------- */
+  var revealEls = document.querySelectorAll('.reveal');
+  if ('IntersectionObserver' in window) {
+    var revealObserver = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('in');
+          revealObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12, rootMargin: '0px 0px -8% 0px' });
+    revealEls.forEach(function (el) { revealObserver.observe(el); });
+  } else {
+    revealEls.forEach(function (el) { el.classList.add('in'); });
+  }
+
+  /* ---------- Scroll spy ---------- */
+  if ('IntersectionObserver' in window) {
+    var sections = navLinks
+      .map(function (l) { return document.querySelector(l.getAttribute('href')); })
+      .filter(Boolean);
+    var spy = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (!entry.isIntersecting) { return; }
+        var id = '#' + entry.target.id;
+        navLinks.forEach(function (l) {
+          if (l.getAttribute('href') === id) { l.setAttribute('aria-current', 'true'); }
+          else { l.removeAttribute('aria-current'); }
+        });
+      });
+    }, { rootMargin: '-45% 0px -50% 0px', threshold: 0 });
+    sections.forEach(function (s) { spy.observe(s); });
+  }
+
+  /* ---------- Forms (Formspree) ---------- */
+  function setStatus(el, msg, kind) {
+    if (!el) { return; }
+    el.textContent = msg;
+    el.className = 'status show ' + kind;
+  }
+
+  Array.prototype.slice.call(document.querySelectorAll('form[data-form]')).forEach(function (form) {
+    var status = form.querySelector('[data-status]');
+    var btn = form.querySelector('button[type="submit"]');
+
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+
+      if (!form.checkValidity()) {
+        form.reportValidity();
+        setStatus(status, 'Please fill in the required fields so we can reach you.', 'warn');
+        return;
+      }
+
+      var action = form.getAttribute('action') || '';
+      if (action.indexOf('YOUR_FORMSPREE_ID') !== -1) {
+        setStatus(status,
+          'This form is being connected to our email service. In the meantime, please call (612) 563-7806 or email info@minntexcleaning.com — we’re happy to help.',
+          'warn');
+        return;
+      }
+
+      var originalText = btn ? btn.textContent : '';
+      if (btn) { btn.disabled = true; btn.textContent = 'Sending…'; }
+
+      fetch(action, {
+        method: 'POST',
+        body: new FormData(form),
+        headers: { Accept: 'application/json' }
+      }).then(function (res) {
+        if (res.ok) {
+          form.reset();
+          setStatus(status, 'Thank you! Your message has been sent. We’ll be in touch shortly.', 'ok');
+        } else {
+          return res.json().catch(function () { return {}; }).then(function (data) {
+            var msg = (data && data.errors && data.errors.length)
+              ? data.errors.map(function (x) { return x.message; }).join(', ')
+              : 'Something went wrong sending your message.';
+            setStatus(status, msg + ' Please call (612) 563-7806 or email info@minntexcleaning.com.', 'err');
+          });
+        }
+      }).catch(function () {
+        setStatus(status, 'We could not send your message right now. Please call (612) 563-7806 or email info@minntexcleaning.com.', 'err');
+      }).then(function () {
+        if (btn) { btn.disabled = false; btn.textContent = originalText; }
+      });
+    });
+  });
+
+  /* ---------- Set min date on preferred date field ---------- */
+  var dateField = document.getElementById('est-date');
+  if (dateField) {
+    var today = new Date();
+    var iso = new Date(today.getTime() - today.getTimezoneOffset() * 60000).toISOString().slice(0, 10);
+    dateField.min = iso;
+  }
+})();
+</script>
+</body>
+</html>
